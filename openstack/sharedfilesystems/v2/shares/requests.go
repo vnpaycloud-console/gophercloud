@@ -3,8 +3,8 @@ package shares
 import (
 	"context"
 
-	"github.com/gophercloud/gophercloud/v2"
-	"github.com/gophercloud/gophercloud/v2/pagination"
+	"github.com/vnpaycloud-console/gophercloud/v2"
+	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
 )
 
 // SchedulerHints contains options for providing scheduler hints when creating

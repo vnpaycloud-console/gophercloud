@@ -6,9 +6,9 @@ import (
 	"context"
 	"testing"
 
-	"github.com/gophercloud/gophercloud/v2/internal/acceptance/clients"
-	"github.com/gophercloud/gophercloud/v2/internal/acceptance/tools"
-	"github.com/gophercloud/gophercloud/v2/openstack/networking/v2/apiversions"
+	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/clients"
+	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/tools"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/networking/v2/apiversions"
 )
 
 func TestAPIVersionsList(t *testing.T) {

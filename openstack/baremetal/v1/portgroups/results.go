@@ -3,8 +3,8 @@ package portgroups
 import (
 	"time"
 
-	"github.com/gophercloud/gophercloud/v2"
-	"github.com/gophercloud/gophercloud/v2/pagination"
+	"github.com/vnpaycloud-console/gophercloud/v2"
+	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
 )
 
 // ResourceLink represents a link with href and rel attributes

@@ -6,10 +6,10 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/gophercloud/gophercloud/v2/openstack/networking/v2/apiversions"
-	"github.com/gophercloud/gophercloud/v2/pagination"
-	th "github.com/gophercloud/gophercloud/v2/testhelper"
-	fake "github.com/gophercloud/gophercloud/v2/testhelper/client"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/networking/v2/apiversions"
+	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
+	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
+	fake "github.com/vnpaycloud-console/gophercloud/v2/testhelper/client"
 )
 
 func TestListVersions(t *testing.T) {

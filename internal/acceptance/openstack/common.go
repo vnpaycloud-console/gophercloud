@@ -5,7 +5,7 @@ package openstack
 import (
 	"testing"
 
-	"github.com/gophercloud/gophercloud/v2/openstack/common/extensions"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/common/extensions"
 )
 
 // PrintExtension prints an extension and all of its attributes.

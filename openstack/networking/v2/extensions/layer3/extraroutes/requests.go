@@ -3,8 +3,8 @@ package extraroutes
 import (
 	"context"
 
-	"github.com/gophercloud/gophercloud/v2"
-	"github.com/gophercloud/gophercloud/v2/openstack/networking/v2/extensions/layer3/routers"
+	"github.com/vnpaycloud-console/gophercloud/v2"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/networking/v2/extensions/layer3/routers"
 )
 
 // OptsBuilder allows extensions to add additional parameters to the Add or

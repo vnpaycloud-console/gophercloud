@@ -6,11 +6,11 @@ import (
 	"context"
 	"testing"
 
-	"github.com/gophercloud/gophercloud/v2/internal/acceptance/clients"
-	"github.com/gophercloud/gophercloud/v2/internal/acceptance/tools"
-	"github.com/gophercloud/gophercloud/v2/openstack/image/v2/tasks"
-	"github.com/gophercloud/gophercloud/v2/pagination"
-	th "github.com/gophercloud/gophercloud/v2/testhelper"
+	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/clients"
+	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/tools"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/image/v2/tasks"
+	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
+	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
 )
 
 func TestTasksListEachPage(t *testing.T) {

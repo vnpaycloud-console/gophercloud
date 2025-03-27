@@ -3,8 +3,8 @@ package policies
 import (
 	"encoding/json"
 
-	"github.com/gophercloud/gophercloud/v2"
-	"github.com/gophercloud/gophercloud/v2/pagination"
+	"github.com/vnpaycloud-console/gophercloud/v2"
+	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
 )
 
 // Policy is an arbitrarily serialized policy engine rule

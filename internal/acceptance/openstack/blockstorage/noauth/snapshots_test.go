@@ -6,9 +6,9 @@ import (
 	"context"
 	"testing"
 
-	"github.com/gophercloud/gophercloud/v2/internal/acceptance/clients"
-	"github.com/gophercloud/gophercloud/v2/internal/acceptance/tools"
-	"github.com/gophercloud/gophercloud/v2/openstack/blockstorage/v3/snapshots"
+	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/clients"
+	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/tools"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/blockstorage/v3/snapshots"
 )
 
 func TestSnapshotsList(t *testing.T) {

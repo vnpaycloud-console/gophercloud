@@ -6,9 +6,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/gophercloud/gophercloud/v2/openstack/loadbalancer/v2/amphorae"
-	th "github.com/gophercloud/gophercloud/v2/testhelper"
-	"github.com/gophercloud/gophercloud/v2/testhelper/client"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/loadbalancer/v2/amphorae"
+	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
+	"github.com/vnpaycloud-console/gophercloud/v2/testhelper/client"
 )
 
 // AmphoraeListBody contains the canned body of a amphora list response.

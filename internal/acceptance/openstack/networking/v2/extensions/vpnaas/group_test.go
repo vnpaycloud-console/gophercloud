@@ -6,10 +6,10 @@ import (
 	"context"
 	"testing"
 
-	"github.com/gophercloud/gophercloud/v2/internal/acceptance/clients"
-	"github.com/gophercloud/gophercloud/v2/internal/acceptance/tools"
-	"github.com/gophercloud/gophercloud/v2/openstack/networking/v2/extensions/vpnaas/endpointgroups"
-	th "github.com/gophercloud/gophercloud/v2/testhelper"
+	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/clients"
+	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/tools"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/networking/v2/extensions/vpnaas/endpointgroups"
+	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
 )
 
 func TestGroupList(t *testing.T) {

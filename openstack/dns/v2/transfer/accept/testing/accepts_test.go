@@ -4,10 +4,10 @@ import (
 	"context"
 	"testing"
 
-	transferAccepts "github.com/gophercloud/gophercloud/v2/openstack/dns/v2/transfer/accept"
-	"github.com/gophercloud/gophercloud/v2/pagination"
-	th "github.com/gophercloud/gophercloud/v2/testhelper"
-	"github.com/gophercloud/gophercloud/v2/testhelper/client"
+	transferAccepts "github.com/vnpaycloud-console/gophercloud/v2/openstack/dns/v2/transfer/accept"
+	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
+	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
+	"github.com/vnpaycloud-console/gophercloud/v2/testhelper/client"
 )
 
 func TestList(t *testing.T) {

@@ -4,10 +4,10 @@ import (
 	"context"
 	"testing"
 
-	"github.com/gophercloud/gophercloud/v2/openstack/messaging/v2/messages"
-	"github.com/gophercloud/gophercloud/v2/pagination"
-	th "github.com/gophercloud/gophercloud/v2/testhelper"
-	fake "github.com/gophercloud/gophercloud/v2/testhelper/client"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/messaging/v2/messages"
+	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
+	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
+	fake "github.com/vnpaycloud-console/gophercloud/v2/testhelper/client"
 )
 
 func TestList(t *testing.T) {

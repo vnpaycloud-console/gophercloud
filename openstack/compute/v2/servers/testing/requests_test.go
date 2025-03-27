@@ -7,11 +7,11 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/gophercloud/gophercloud/v2/internal/ptr"
-	"github.com/gophercloud/gophercloud/v2/openstack/compute/v2/servers"
-	"github.com/gophercloud/gophercloud/v2/pagination"
-	th "github.com/gophercloud/gophercloud/v2/testhelper"
-	"github.com/gophercloud/gophercloud/v2/testhelper/client"
+	"github.com/vnpaycloud-console/gophercloud/v2/internal/ptr"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/compute/v2/servers"
+	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
+	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
+	"github.com/vnpaycloud-console/gophercloud/v2/testhelper/client"
 )
 
 func TestListServers(t *testing.T) {

@@ -3,7 +3,7 @@ package limits
 import (
 	"context"
 
-	"github.com/gophercloud/gophercloud/v2"
+	"github.com/vnpaycloud-console/gophercloud/v2"
 )
 
 // GetOptsBuilder allows extensions to add additional parameters to the

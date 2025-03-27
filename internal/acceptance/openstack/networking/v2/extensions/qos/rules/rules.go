@@ -4,9 +4,9 @@ import (
 	"context"
 	"testing"
 
-	"github.com/gophercloud/gophercloud/v2"
-	"github.com/gophercloud/gophercloud/v2/openstack/networking/v2/extensions/qos/rules"
-	th "github.com/gophercloud/gophercloud/v2/testhelper"
+	"github.com/vnpaycloud-console/gophercloud/v2"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/networking/v2/extensions/qos/rules"
+	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
 )
 
 // CreateBandwidthLimitRule will create a QoS BandwidthLimitRule associated with the provided QoS policy.

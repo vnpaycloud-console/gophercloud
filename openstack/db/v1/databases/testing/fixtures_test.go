@@ -3,7 +3,7 @@ package testing
 import (
 	"testing"
 
-	"github.com/gophercloud/gophercloud/v2/testhelper/fixture"
+	"github.com/vnpaycloud-console/gophercloud/v2/testhelper/fixture"
 )
 
 var (

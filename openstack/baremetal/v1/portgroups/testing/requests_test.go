@@ -4,11 +4,11 @@ import (
 	"context"
 	"testing"
 
-	"github.com/gophercloud/gophercloud/v2/openstack/baremetal/v1/portgroups"
-	"github.com/gophercloud/gophercloud/v2/pagination"
-	"github.com/gophercloud/gophercloud/v2/testhelper/client"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/baremetal/v1/portgroups"
+	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
+	"github.com/vnpaycloud-console/gophercloud/v2/testhelper/client"
 
-	th "github.com/gophercloud/gophercloud/v2/testhelper"
+	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
 )
 
 func TestListPortGroups(t *testing.T) {

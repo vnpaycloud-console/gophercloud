@@ -6,12 +6,12 @@ import (
 	"context"
 	"testing"
 
-	"github.com/gophercloud/gophercloud/v2"
-	"github.com/gophercloud/gophercloud/v2/internal/acceptance/tools"
-	"github.com/gophercloud/gophercloud/v2/openstack/identity/v2/roles"
-	"github.com/gophercloud/gophercloud/v2/openstack/identity/v2/tenants"
-	"github.com/gophercloud/gophercloud/v2/openstack/identity/v2/users"
-	th "github.com/gophercloud/gophercloud/v2/testhelper"
+	"github.com/vnpaycloud-console/gophercloud/v2"
+	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/tools"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/identity/v2/roles"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/identity/v2/tenants"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/identity/v2/users"
+	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
 )
 
 // AddUserRole will grant a role to a user in a tenant. An error will be

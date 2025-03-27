@@ -6,12 +6,12 @@ import (
 	"context"
 	"testing"
 
-	"github.com/gophercloud/gophercloud/v2/internal/acceptance/clients"
-	"github.com/gophercloud/gophercloud/v2/openstack"
-	th "github.com/gophercloud/gophercloud/v2/testhelper"
+	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/clients"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack"
+	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
 
-	"github.com/gophercloud/gophercloud/v2"
-	"github.com/gophercloud/gophercloud/v2/openstack/identity/v3/projects"
+	"github.com/vnpaycloud-console/gophercloud/v2"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/identity/v3/projects"
 )
 
 func TestReauthAuthResultDeadlock(t *testing.T) {

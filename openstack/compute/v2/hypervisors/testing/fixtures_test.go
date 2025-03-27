@@ -5,10 +5,10 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/gophercloud/gophercloud/v2/openstack/compute/v2/hypervisors"
-	"github.com/gophercloud/gophercloud/v2/testhelper"
-	th "github.com/gophercloud/gophercloud/v2/testhelper"
-	"github.com/gophercloud/gophercloud/v2/testhelper/client"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/compute/v2/hypervisors"
+	"github.com/vnpaycloud-console/gophercloud/v2/testhelper"
+	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
+	"github.com/vnpaycloud-console/gophercloud/v2/testhelper/client"
 )
 
 // HypervisorListBodyPre253 represents a raw hypervisor list from the Compute

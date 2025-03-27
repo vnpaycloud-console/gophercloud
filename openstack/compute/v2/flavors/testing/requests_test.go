@@ -7,11 +7,11 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/gophercloud/gophercloud/v2/internal/ptr"
-	"github.com/gophercloud/gophercloud/v2/openstack/compute/v2/flavors"
-	"github.com/gophercloud/gophercloud/v2/pagination"
-	th "github.com/gophercloud/gophercloud/v2/testhelper"
-	fake "github.com/gophercloud/gophercloud/v2/testhelper/client"
+	"github.com/vnpaycloud-console/gophercloud/v2/internal/ptr"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/compute/v2/flavors"
+	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
+	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
+	fake "github.com/vnpaycloud-console/gophercloud/v2/testhelper/client"
 )
 
 func TestListFlavors(t *testing.T) {

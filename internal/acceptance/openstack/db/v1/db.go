@@ -7,12 +7,12 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/gophercloud/gophercloud/v2"
-	"github.com/gophercloud/gophercloud/v2/internal/acceptance/clients"
-	"github.com/gophercloud/gophercloud/v2/internal/acceptance/tools"
-	"github.com/gophercloud/gophercloud/v2/openstack/db/v1/databases"
-	"github.com/gophercloud/gophercloud/v2/openstack/db/v1/instances"
-	"github.com/gophercloud/gophercloud/v2/openstack/db/v1/users"
+	"github.com/vnpaycloud-console/gophercloud/v2"
+	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/clients"
+	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/tools"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/db/v1/databases"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/db/v1/instances"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/db/v1/users"
 )
 
 // CreateDatabase will create a database with a randomly generated name.

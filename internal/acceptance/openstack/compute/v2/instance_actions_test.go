@@ -7,11 +7,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/gophercloud/gophercloud/v2/internal/acceptance/clients"
-	"github.com/gophercloud/gophercloud/v2/internal/acceptance/tools"
-	"github.com/gophercloud/gophercloud/v2/openstack/compute/v2/instanceactions"
-	"github.com/gophercloud/gophercloud/v2/openstack/compute/v2/servers"
-	th "github.com/gophercloud/gophercloud/v2/testhelper"
+	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/clients"
+	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/tools"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/compute/v2/instanceactions"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/compute/v2/servers"
+	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
 )
 
 func TestInstanceActions(t *testing.T) {

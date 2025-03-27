@@ -6,12 +6,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/gophercloud/gophercloud/v2"
-	"github.com/gophercloud/gophercloud/v2/openstack/identity/v3/groups"
-	"github.com/gophercloud/gophercloud/v2/openstack/identity/v3/projects"
-	"github.com/gophercloud/gophercloud/v2/openstack/identity/v3/users"
-	th "github.com/gophercloud/gophercloud/v2/testhelper"
-	"github.com/gophercloud/gophercloud/v2/testhelper/client"
+	"github.com/vnpaycloud-console/gophercloud/v2"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/identity/v3/groups"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/identity/v3/projects"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/identity/v3/users"
+	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
+	"github.com/vnpaycloud-console/gophercloud/v2/testhelper/client"
 )
 
 // ListOutput provides a single page of User results.

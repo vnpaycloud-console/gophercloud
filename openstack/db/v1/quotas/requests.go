@@ -3,7 +3,7 @@ package quotas
 import (
 	"context"
 
-	"github.com/gophercloud/gophercloud/v2"
+	"github.com/vnpaycloud-console/gophercloud/v2"
 )
 
 // Get retrieves the details of quotas for a specified tenant.

@@ -4,7 +4,7 @@ import (
 	"context"
 	"io"
 
-	"github.com/gophercloud/gophercloud/v2"
+	"github.com/vnpaycloud-console/gophercloud/v2"
 )
 
 // Upload uploads an image file.

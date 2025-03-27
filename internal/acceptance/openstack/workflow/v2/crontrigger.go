@@ -5,11 +5,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/gophercloud/gophercloud/v2"
-	"github.com/gophercloud/gophercloud/v2/internal/acceptance/tools"
-	"github.com/gophercloud/gophercloud/v2/openstack/workflow/v2/crontriggers"
-	"github.com/gophercloud/gophercloud/v2/openstack/workflow/v2/workflows"
-	th "github.com/gophercloud/gophercloud/v2/testhelper"
+	"github.com/vnpaycloud-console/gophercloud/v2"
+	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/tools"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/workflow/v2/crontriggers"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/workflow/v2/workflows"
+	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
 )
 
 // CreateCronTrigger creates a cron trigger for the given workflow.

@@ -8,12 +8,12 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/gophercloud/gophercloud/v2/internal/acceptance/clients"
-	v2 "github.com/gophercloud/gophercloud/v2/internal/acceptance/openstack/networking/v2"
-	"github.com/gophercloud/gophercloud/v2/internal/acceptance/tools"
-	"github.com/gophercloud/gophercloud/v2/openstack/networking/v2/extensions/attributestags"
-	"github.com/gophercloud/gophercloud/v2/openstack/networking/v2/extensions/trunks"
-	th "github.com/gophercloud/gophercloud/v2/testhelper"
+	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/clients"
+	v2 "github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/openstack/networking/v2"
+	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/tools"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/networking/v2/extensions/attributestags"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/networking/v2/extensions/trunks"
+	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
 )
 
 func TestTrunkCRUD(t *testing.T) {

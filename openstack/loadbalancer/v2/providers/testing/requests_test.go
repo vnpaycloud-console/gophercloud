@@ -4,10 +4,10 @@ import (
 	"context"
 	"testing"
 
-	"github.com/gophercloud/gophercloud/v2/openstack/loadbalancer/v2/providers"
-	fake "github.com/gophercloud/gophercloud/v2/openstack/loadbalancer/v2/testhelper"
-	"github.com/gophercloud/gophercloud/v2/pagination"
-	th "github.com/gophercloud/gophercloud/v2/testhelper"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/loadbalancer/v2/providers"
+	fake "github.com/vnpaycloud-console/gophercloud/v2/openstack/loadbalancer/v2/testhelper"
+	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
+	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
 )
 
 func TestListProviders(t *testing.T) {

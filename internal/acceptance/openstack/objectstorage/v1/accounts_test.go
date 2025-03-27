@@ -7,9 +7,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/gophercloud/gophercloud/v2/internal/acceptance/clients"
-	"github.com/gophercloud/gophercloud/v2/openstack/objectstorage/v1/accounts"
-	th "github.com/gophercloud/gophercloud/v2/testhelper"
+	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/clients"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/objectstorage/v1/accounts"
+	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
 )
 
 func TestAccounts(t *testing.T) {

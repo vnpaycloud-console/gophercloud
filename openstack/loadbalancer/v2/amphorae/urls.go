@@ -1,6 +1,6 @@
 package amphorae
 
-import "github.com/gophercloud/gophercloud/v2"
+import "github.com/vnpaycloud-console/gophercloud/v2"
 
 const (
 	rootPath     = "octavia"

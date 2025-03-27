@@ -4,9 +4,9 @@ import (
 	"context"
 	"testing"
 
-	"github.com/gophercloud/gophercloud/v2/openstack"
-	"github.com/gophercloud/gophercloud/v2/openstack/objectstorage/v1/swauth"
-	th "github.com/gophercloud/gophercloud/v2/testhelper"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/objectstorage/v1/swauth"
+	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
 )
 
 func TestAuth(t *testing.T) {

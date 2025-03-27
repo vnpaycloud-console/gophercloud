@@ -3,8 +3,8 @@ package testing
 import (
 	"testing"
 
-	"github.com/gophercloud/gophercloud/v2/openstack/container/v1/capsules"
-	th "github.com/gophercloud/gophercloud/v2/testhelper"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/container/v1/capsules"
+	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
 )
 
 func TestTemplateParsing(t *testing.T) {

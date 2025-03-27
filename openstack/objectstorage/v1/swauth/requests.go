@@ -3,7 +3,7 @@ package swauth
 import (
 	"context"
 
-	"github.com/gophercloud/gophercloud/v2"
+	"github.com/vnpaycloud-console/gophercloud/v2"
 )
 
 // AuthOptsBuilder describes struct types that can be accepted by the Auth call.

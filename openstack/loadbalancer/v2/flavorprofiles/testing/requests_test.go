@@ -4,12 +4,12 @@ import (
 	"context"
 	"testing"
 
-	"github.com/gophercloud/gophercloud/v2/internal/ptr"
-	"github.com/gophercloud/gophercloud/v2/openstack/loadbalancer/v2/flavorprofiles"
-	"github.com/gophercloud/gophercloud/v2/pagination"
+	"github.com/vnpaycloud-console/gophercloud/v2/internal/ptr"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/loadbalancer/v2/flavorprofiles"
+	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
 
-	fake "github.com/gophercloud/gophercloud/v2/openstack/loadbalancer/v2/testhelper"
-	th "github.com/gophercloud/gophercloud/v2/testhelper"
+	fake "github.com/vnpaycloud-console/gophercloud/v2/openstack/loadbalancer/v2/testhelper"
+	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
 )
 
 func TestListFlavorProfiles(t *testing.T) {

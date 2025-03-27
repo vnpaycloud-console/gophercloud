@@ -3,8 +3,8 @@ package testing
 import (
 	"testing"
 
-	"github.com/gophercloud/gophercloud/v2"
-	th "github.com/gophercloud/gophercloud/v2/testhelper"
+	"github.com/vnpaycloud-console/gophercloud/v2"
+	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
 )
 
 func TestToTokenV3ScopeMap(t *testing.T) {
