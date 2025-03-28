@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"testing"
 
-	"github.com/gophercloud/gophercloud/v2/openstack/baremetal/inventory"
-	th "github.com/gophercloud/gophercloud/v2/testhelper"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/baremetal/inventory"
+	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
 )
 
 func TestExtraHardware(t *testing.T) {

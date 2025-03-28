@@ -6,10 +6,10 @@ import (
 	"context"
 	"testing"
 
-	"github.com/gophercloud/gophercloud/v2/internal/acceptance/clients"
-	compute "github.com/gophercloud/gophercloud/v2/internal/acceptance/openstack/compute/v2"
-	"github.com/gophercloud/gophercloud/v2/openstack/blockstorage/v3/volumes"
-	th "github.com/gophercloud/gophercloud/v2/testhelper"
+	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/clients"
+	compute "github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/openstack/compute/v2"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/blockstorage/v3/volumes"
+	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
 )
 
 func TestVolumeAttachments(t *testing.T) {

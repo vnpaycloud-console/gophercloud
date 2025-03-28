@@ -3,9 +3,9 @@ package pools
 import (
 	"context"
 
-	"github.com/gophercloud/gophercloud/v2"
-	"github.com/gophercloud/gophercloud/v2/openstack/loadbalancer/v2/monitors"
-	"github.com/gophercloud/gophercloud/v2/pagination"
+	"github.com/vnpaycloud-console/gophercloud/v2"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/loadbalancer/v2/monitors"
+	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
 )
 
 // Type TLSVersion represents a tls version

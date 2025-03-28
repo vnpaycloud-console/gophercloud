@@ -6,12 +6,12 @@ import (
 	"context"
 	"testing"
 
-	"github.com/gophercloud/gophercloud/v2/internal/acceptance/clients"
-	networking "github.com/gophercloud/gophercloud/v2/internal/acceptance/openstack/networking/v2"
-	"github.com/gophercloud/gophercloud/v2/internal/acceptance/openstack/networking/v2/extensions/layer3"
-	"github.com/gophercloud/gophercloud/v2/internal/acceptance/tools"
-	"github.com/gophercloud/gophercloud/v2/openstack/networking/v2/extensions/bgpvpns"
-	th "github.com/gophercloud/gophercloud/v2/testhelper"
+	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/clients"
+	networking "github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/openstack/networking/v2"
+	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/openstack/networking/v2/extensions/layer3"
+	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/tools"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/networking/v2/extensions/bgpvpns"
+	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
 )
 
 func TestBGPVPNCRUD(t *testing.T) {

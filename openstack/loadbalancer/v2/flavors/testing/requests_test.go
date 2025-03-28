@@ -6,12 +6,12 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/gophercloud/gophercloud/v2/openstack/loadbalancer/v2/flavors"
-	"github.com/gophercloud/gophercloud/v2/pagination"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/loadbalancer/v2/flavors"
+	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
 
-	fake "github.com/gophercloud/gophercloud/v2/openstack/loadbalancer/v2/testhelper"
-	th "github.com/gophercloud/gophercloud/v2/testhelper"
-	"github.com/gophercloud/gophercloud/v2/testhelper/client"
+	fake "github.com/vnpaycloud-console/gophercloud/v2/openstack/loadbalancer/v2/testhelper"
+	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
+	"github.com/vnpaycloud-console/gophercloud/v2/testhelper/client"
 )
 
 func TestListFlavors(t *testing.T) {

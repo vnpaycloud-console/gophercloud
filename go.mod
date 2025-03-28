@@ -1,4 +1,4 @@
-module github.com/gophercloud/gophercloud/v2
+module github.com/vnpaycloud-console/gophercloud/v2
 
 go 1.22
 

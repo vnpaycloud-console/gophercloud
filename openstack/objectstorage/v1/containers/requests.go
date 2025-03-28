@@ -5,9 +5,9 @@ import (
 	"context"
 	"net/url"
 
-	"github.com/gophercloud/gophercloud/v2"
-	v1 "github.com/gophercloud/gophercloud/v2/openstack/objectstorage/v1"
-	"github.com/gophercloud/gophercloud/v2/pagination"
+	"github.com/vnpaycloud-console/gophercloud/v2"
+	v1 "github.com/vnpaycloud-console/gophercloud/v2/openstack/objectstorage/v1"
+	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
 )
 
 // ListOptsBuilder allows extensions to add additional parameters to the List

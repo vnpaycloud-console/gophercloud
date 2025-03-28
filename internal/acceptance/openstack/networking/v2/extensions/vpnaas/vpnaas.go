@@ -4,14 +4,14 @@ import (
 	"context"
 	"testing"
 
-	"github.com/gophercloud/gophercloud/v2"
-	"github.com/gophercloud/gophercloud/v2/internal/acceptance/tools"
-	"github.com/gophercloud/gophercloud/v2/openstack/networking/v2/extensions/vpnaas/endpointgroups"
-	"github.com/gophercloud/gophercloud/v2/openstack/networking/v2/extensions/vpnaas/ikepolicies"
-	"github.com/gophercloud/gophercloud/v2/openstack/networking/v2/extensions/vpnaas/ipsecpolicies"
-	"github.com/gophercloud/gophercloud/v2/openstack/networking/v2/extensions/vpnaas/services"
-	"github.com/gophercloud/gophercloud/v2/openstack/networking/v2/extensions/vpnaas/siteconnections"
-	th "github.com/gophercloud/gophercloud/v2/testhelper"
+	"github.com/vnpaycloud-console/gophercloud/v2"
+	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/tools"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/networking/v2/extensions/vpnaas/endpointgroups"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/networking/v2/extensions/vpnaas/ikepolicies"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/networking/v2/extensions/vpnaas/ipsecpolicies"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/networking/v2/extensions/vpnaas/services"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/networking/v2/extensions/vpnaas/siteconnections"
+	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
 )
 
 // CreateService will create a Service with a random name and a specified router ID

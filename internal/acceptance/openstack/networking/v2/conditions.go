@@ -4,8 +4,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/gophercloud/gophercloud/v2"
-	"github.com/gophercloud/gophercloud/v2/openstack/common/extensions"
+	"github.com/vnpaycloud-console/gophercloud/v2"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/common/extensions"
 )
 
 // RequireNeutronExtension will restrict a test to be only run in environments

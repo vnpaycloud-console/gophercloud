@@ -4,9 +4,9 @@ import (
 	"context"
 	"testing"
 
-	az "github.com/gophercloud/gophercloud/v2/openstack/blockstorage/v2/availabilityzones"
-	th "github.com/gophercloud/gophercloud/v2/testhelper"
-	"github.com/gophercloud/gophercloud/v2/testhelper/client"
+	az "github.com/vnpaycloud-console/gophercloud/v2/openstack/blockstorage/v2/availabilityzones"
+	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
+	"github.com/vnpaycloud-console/gophercloud/v2/testhelper/client"
 )
 
 // Verifies that availability zones can be listed correctly

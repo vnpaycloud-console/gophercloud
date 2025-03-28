@@ -5,12 +5,12 @@ import (
 	"testing"
 	"time"
 
-	fake "github.com/gophercloud/gophercloud/v2/openstack/networking/v2/common"
-	"github.com/gophercloud/gophercloud/v2/openstack/networking/v2/extensions/dns"
-	"github.com/gophercloud/gophercloud/v2/openstack/networking/v2/extensions/layer3/floatingips"
-	"github.com/gophercloud/gophercloud/v2/openstack/networking/v2/networks"
-	"github.com/gophercloud/gophercloud/v2/openstack/networking/v2/ports"
-	th "github.com/gophercloud/gophercloud/v2/testhelper"
+	fake "github.com/vnpaycloud-console/gophercloud/v2/openstack/networking/v2/common"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/networking/v2/extensions/dns"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/networking/v2/extensions/layer3/floatingips"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/networking/v2/networks"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/networking/v2/ports"
+	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
 )
 
 type PortDNS struct {

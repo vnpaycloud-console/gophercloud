@@ -10,11 +10,11 @@ import (
 	"os"
 	"strings"
 
-	"github.com/gophercloud/gophercloud/v2"
-	"github.com/gophercloud/gophercloud/v2/openstack"
-	baremetalHTTPBasic "github.com/gophercloud/gophercloud/v2/openstack/baremetal/httpbasic"
-	baremetalNoAuth "github.com/gophercloud/gophercloud/v2/openstack/baremetal/noauth"
-	blockstorageNoAuth "github.com/gophercloud/gophercloud/v2/openstack/blockstorage/noauth"
+	"github.com/vnpaycloud-console/gophercloud/v2"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack"
+	baremetalHTTPBasic "github.com/vnpaycloud-console/gophercloud/v2/openstack/baremetal/httpbasic"
+	baremetalNoAuth "github.com/vnpaycloud-console/gophercloud/v2/openstack/baremetal/noauth"
+	blockstorageNoAuth "github.com/vnpaycloud-console/gophercloud/v2/openstack/blockstorage/noauth"
 )
 
 // AcceptanceTestChoices contains image and flavor selections for use by the acceptance tests.

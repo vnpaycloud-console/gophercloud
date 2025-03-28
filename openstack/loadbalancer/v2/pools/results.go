@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"time"
 
-	"github.com/gophercloud/gophercloud/v2"
-	"github.com/gophercloud/gophercloud/v2/openstack/loadbalancer/v2/monitors"
-	"github.com/gophercloud/gophercloud/v2/pagination"
+	"github.com/vnpaycloud-console/gophercloud/v2"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/loadbalancer/v2/monitors"
+	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
 )
 
 // SessionPersistence represents the session persistence feature of the load

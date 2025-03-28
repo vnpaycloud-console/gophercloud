@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/gophercloud/gophercloud/v2"
+	"github.com/vnpaycloud-console/gophercloud/v2"
 )
 
 // WaitFor uses WaitForTimeout to poll a predicate function once per second to

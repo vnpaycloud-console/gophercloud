@@ -11,11 +11,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/gophercloud/gophercloud/v2/internal/acceptance/clients"
-	"github.com/gophercloud/gophercloud/v2/internal/acceptance/tools"
-	"github.com/gophercloud/gophercloud/v2/openstack/objectstorage/v1/containers"
-	"github.com/gophercloud/gophercloud/v2/openstack/objectstorage/v1/objects"
-	th "github.com/gophercloud/gophercloud/v2/testhelper"
+	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/clients"
+	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/tools"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/objectstorage/v1/containers"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/objectstorage/v1/objects"
+	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
 )
 
 // numObjects is the number of objects to create for testing.

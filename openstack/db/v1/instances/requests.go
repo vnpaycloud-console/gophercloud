@@ -3,10 +3,10 @@ package instances
 import (
 	"context"
 
-	"github.com/gophercloud/gophercloud/v2"
-	db "github.com/gophercloud/gophercloud/v2/openstack/db/v1/databases"
-	"github.com/gophercloud/gophercloud/v2/openstack/db/v1/users"
-	"github.com/gophercloud/gophercloud/v2/pagination"
+	"github.com/vnpaycloud-console/gophercloud/v2"
+	db "github.com/vnpaycloud-console/gophercloud/v2/openstack/db/v1/databases"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/db/v1/users"
+	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
 )
 
 // CreateOptsBuilder is the top-level interface for create options.

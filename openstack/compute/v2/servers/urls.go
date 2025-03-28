@@ -1,6 +1,6 @@
 package servers
 
-import "github.com/gophercloud/gophercloud/v2"
+import "github.com/vnpaycloud-console/gophercloud/v2"
 
 func createURL(client *gophercloud.ServiceClient) string {
 	return client.ServiceURL("servers")

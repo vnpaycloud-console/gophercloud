@@ -8,14 +8,14 @@ import (
 	"testing"
 	"time"
 
-	"github.com/gophercloud/gophercloud/v2"
-	"github.com/gophercloud/gophercloud/v2/internal/acceptance/clients"
-	"github.com/gophercloud/gophercloud/v2/internal/acceptance/tools"
-	"github.com/gophercloud/gophercloud/v2/openstack"
-	"github.com/gophercloud/gophercloud/v2/openstack/identity/v3/credentials"
-	"github.com/gophercloud/gophercloud/v2/openstack/identity/v3/ec2tokens"
-	"github.com/gophercloud/gophercloud/v2/openstack/identity/v3/tokens"
-	th "github.com/gophercloud/gophercloud/v2/testhelper"
+	"github.com/vnpaycloud-console/gophercloud/v2"
+	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/clients"
+	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/tools"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/identity/v3/credentials"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/identity/v3/ec2tokens"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/identity/v3/tokens"
+	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
 )
 
 func TestAuthenticatedClient(t *testing.T) {

@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/gophercloud/gophercloud/v2/openstack/config/clouds"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/config/clouds"
 )
 
 func ExampleWithCloudName() {

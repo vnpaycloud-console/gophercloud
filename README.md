@@ -14,7 +14,7 @@ Join us on kubernetes slack, on [#gophercloud](https://kubernetes.slack.com/arch
 Reference a Gophercloud package in your code:
 
 ```go
-import "github.com/gophercloud/gophercloud/v2"
+import "github.com/vnpaycloud-console/gophercloud/v2"
 ```
 
 Then update your `go.mod`:
@@ -70,9 +70,9 @@ package main
 import (
 	"context"
 
-	"github.com/gophercloud/gophercloud/v2/openstack"
-	"github.com/gophercloud/gophercloud/v2/openstack/config"
-	"github.com/gophercloud/gophercloud/v2/openstack/config/clouds"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/config"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack/config/clouds"
 )
 
 func main() {
@@ -118,8 +118,8 @@ import (
 	"context"
 	"os"
 
-	"github.com/gophercloud/gophercloud/v2"
-	"github.com/gophercloud/gophercloud/v2/openstack"
+	"github.com/vnpaycloud-console/gophercloud/v2"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack"
 )
 
 func main() {
@@ -157,8 +157,8 @@ package main
 import (
 	"context"
 
-	"github.com/gophercloud/gophercloud/v2"
-	"github.com/gophercloud/gophercloud/v2/openstack"
+	"github.com/vnpaycloud-console/gophercloud/v2"
+	"github.com/vnpaycloud-console/gophercloud/v2/openstack"
 )
 
 func main() {
@@ -192,7 +192,7 @@ we invoke the `Create` method and pass in the flavor ID (hardware
 specification) and image ID (operating system) we're interested in:
 
 ```go
-import "github.com/gophercloud/gophercloud/v2/openstack/compute/v2/servers"
+import "github.com/vnpaycloud-console/gophercloud/v2/openstack/compute/v2/servers"
 
 func main() {
     // [...]
@@ -207,7 +207,7 @@ func main() {
 ```
 
 The above code sample creates a new server with the parameters, and returns a
-[`servers.Server`](https://pkg.go.dev/github.com/gophercloud/gophercloud/v2/openstack/compute/v2/servers#Server).
+[`servers.Server`](https://pkg.go.dev/github.com/vnpaycloud-console/gophercloud/v2/openstack/compute/v2/servers#Server).
 
 ## Supported Services
 

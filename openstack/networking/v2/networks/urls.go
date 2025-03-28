@@ -1,6 +1,6 @@
 package networks
 
-import "github.com/gophercloud/gophercloud/v2"
+import "github.com/vnpaycloud-console/gophercloud/v2"
 
 func resourceURL(c *gophercloud.ServiceClient, id string) string {
 	return c.ServiceURL("networks", id)
