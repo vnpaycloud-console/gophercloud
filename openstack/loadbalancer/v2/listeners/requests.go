@@ -3,10 +3,10 @@ package listeners
 import (
 	"context"
 
-	"github.com/vnpaycloud-console/gophercloud/v2"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/loadbalancer/v2/l7policies"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/loadbalancer/v2/pools"
-	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
+	"github.com/gophercloud/gophercloud/v2"
+	"github.com/gophercloud/gophercloud/v2/openstack/loadbalancer/v2/l7policies"
+	"github.com/gophercloud/gophercloud/v2/openstack/loadbalancer/v2/pools"
+	"github.com/gophercloud/gophercloud/v2/pagination"
 )
 
 // Type Protocol represents a listener protocol.

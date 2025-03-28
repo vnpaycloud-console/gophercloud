@@ -5,9 +5,9 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/container/v1/capsules"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
-	fakeclient "github.com/vnpaycloud-console/gophercloud/v2/testhelper/client"
+	"github.com/gophercloud/gophercloud/v2/openstack/container/v1/capsules"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
+	fakeclient "github.com/gophercloud/gophercloud/v2/testhelper/client"
 )
 
 // ValidJSONTemplate is a valid OpenStack Capsule template in JSON format

@@ -6,10 +6,10 @@ import (
 	"context"
 	"testing"
 
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/clients"
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/tools"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/orchestration/v1/stacktemplates"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
+	"github.com/gophercloud/gophercloud/v2/internal/acceptance/clients"
+	"github.com/gophercloud/gophercloud/v2/internal/acceptance/tools"
+	"github.com/gophercloud/gophercloud/v2/openstack/orchestration/v1/stacktemplates"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
 )
 
 func TestStackTemplatesCRUD(t *testing.T) {

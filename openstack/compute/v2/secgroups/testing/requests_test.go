@@ -4,11 +4,10 @@ import (
 	"context"
 	"testing"
 
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/ptr"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/compute/v2/secgroups"
-	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
-	"github.com/vnpaycloud-console/gophercloud/v2/testhelper/client"
+	"github.com/gophercloud/gophercloud/v2/openstack/compute/v2/secgroups"
+	"github.com/gophercloud/gophercloud/v2/pagination"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
+	"github.com/gophercloud/gophercloud/v2/testhelper/client"
 )
 
 const (
@@ -117,9 +116,10 @@ func TestUpdate(t *testing.T) {
 
 	mockUpdateGroupResponse(t, groupID)
 
+	description := "new_desc"
 	opts := secgroups.UpdateOpts{
-		Name:        ptr.To("new_name"),
-		Description: ptr.To("new_desc"),
+		Name:        "new_name",
+		Description: &description,
 	}
 
 	group, err := secgroups.Update(context.TODO(), client.ServiceClient(), groupID, opts).Extract()

@@ -87,11 +87,15 @@ Example to Delete a Key Pair owned by a certain user using microversion 2.10 or 
 
 Example to Create a Server With a Key Pair
 
-	createOpts := servers.CreateOpts{
+	serverCreateOpts := servers.CreateOpts{
 		Name:      "server_name",
 		ImageRef:  "image-uuid",
 		FlavorRef: "flavor-uuid",
-		KeyName:   "keypair-name",
+	}
+
+	createOpts := keypairs.CreateOptsExt{
+		CreateOptsBuilder: serverCreateOpts,
+		KeyName:           "keypair-name",
 	}
 
 	server, err := servers.Create(context.TODO(), computeClient, createOpts).Extract()

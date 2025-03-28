@@ -5,11 +5,11 @@ import (
 	"testing"
 	"time"
 
-	v1 "github.com/vnpaycloud-console/gophercloud/v2/openstack/objectstorage/v1"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/objectstorage/v1/containers"
-	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
-	fake "github.com/vnpaycloud-console/gophercloud/v2/testhelper/client"
+	v1 "github.com/gophercloud/gophercloud/v2/openstack/objectstorage/v1"
+	"github.com/gophercloud/gophercloud/v2/openstack/objectstorage/v1/containers"
+	"github.com/gophercloud/gophercloud/v2/pagination"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
+	fake "github.com/gophercloud/gophercloud/v2/testhelper/client"
 )
 
 func TestContainerNames(t *testing.T) {

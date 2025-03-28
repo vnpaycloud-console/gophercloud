@@ -6,13 +6,13 @@ import (
 	"context"
 	"testing"
 
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/clients"
-	v2 "github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/openstack/networking/v2"
-	v2Trunks "github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/openstack/networking/v2/extensions/trunks"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/networking/v2/extensions/trunk_details"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/networking/v2/extensions/trunks"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/networking/v2/ports"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
+	"github.com/gophercloud/gophercloud/v2/internal/acceptance/clients"
+	v2 "github.com/gophercloud/gophercloud/v2/internal/acceptance/openstack/networking/v2"
+	v2Trunks "github.com/gophercloud/gophercloud/v2/internal/acceptance/openstack/networking/v2/extensions/trunks"
+	"github.com/gophercloud/gophercloud/v2/openstack/networking/v2/extensions/trunk_details"
+	"github.com/gophercloud/gophercloud/v2/openstack/networking/v2/extensions/trunks"
+	"github.com/gophercloud/gophercloud/v2/openstack/networking/v2/ports"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
 )
 
 type portWithTrunkDetails struct {

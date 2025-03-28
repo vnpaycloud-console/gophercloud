@@ -3,7 +3,7 @@ package volumes
 import (
 	"context"
 
-	"github.com/vnpaycloud-console/gophercloud/v2"
+	"github.com/gophercloud/gophercloud/v2"
 )
 
 // WaitForStatus will continually poll the resource, checking for a particular status.

@@ -1,6 +1,6 @@
 package nodes
 
-import "github.com/vnpaycloud-console/gophercloud/v2"
+import "github.com/gophercloud/gophercloud/v2"
 
 func createURL(client *gophercloud.ServiceClient) string {
 	return client.ServiceURL("nodes")
@@ -88,12 +88,4 @@ func firmwareListURL(client *gophercloud.ServiceClient, id string) string {
 
 func virtualMediaURL(client *gophercloud.ServiceClient, id string) string {
 	return client.ServiceURL("nodes", id, "vmedia")
-}
-
-func virtualInterfaceURL(client *gophercloud.ServiceClient, id string) string {
-	return client.ServiceURL("nodes", id, "vifs")
-}
-
-func virtualInterfaceDeleteURL(client *gophercloud.ServiceClient, id string, vifID string) string {
-	return client.ServiceURL("nodes", id, "vifs", vifID)
 }

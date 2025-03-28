@@ -3,8 +3,8 @@ package snapshots
 import (
 	"context"
 
-	"github.com/vnpaycloud-console/gophercloud/v2"
-	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
+	"github.com/gophercloud/gophercloud/v2"
+	"github.com/gophercloud/gophercloud/v2/pagination"
 )
 
 // CreateOptsBuilder allows extensions to add additional parameters to the
@@ -110,21 +110,6 @@ func (opts ListOpts) ToSnapshotListQuery() (string, error) {
 // ListOpts.
 func List(client *gophercloud.ServiceClient, opts ListOptsBuilder) pagination.Pager {
 	url := listURL(client)
-	if opts != nil {
-		query, err := opts.ToSnapshotListQuery()
-		if err != nil {
-			return pagination.Pager{Err: err}
-		}
-		url += query
-	}
-	return pagination.NewPager(client, url, func(r pagination.PageResult) pagination.Page {
-		return SnapshotPage{pagination.LinkedPageBase{PageResult: r}}
-	})
-}
-
-// ListDetail returns Snapshots with additional details optionally limited by the conditions provided in ListOpts.
-func ListDetail(client *gophercloud.ServiceClient, opts ListOptsBuilder) pagination.Pager {
-	url := listDetailsURL(client)
 	if opts != nil {
 		query, err := opts.ToSnapshotListQuery()
 		if err != nil {

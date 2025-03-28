@@ -1,7 +1,7 @@
 package testing
 
 import (
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/networking/v2/extensions/quotas"
+	"github.com/gophercloud/gophercloud/v2/openstack/networking/v2/extensions/quotas"
 )
 
 const GetResponseRaw = `

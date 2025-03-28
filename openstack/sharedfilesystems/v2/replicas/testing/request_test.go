@@ -5,10 +5,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/vnpaycloud-console/gophercloud/v2"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/sharedfilesystems/v2/replicas"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
-	"github.com/vnpaycloud-console/gophercloud/v2/testhelper/client"
+	"github.com/gophercloud/gophercloud/v2"
+	"github.com/gophercloud/gophercloud/v2/openstack/sharedfilesystems/v2/replicas"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
+	"github.com/gophercloud/gophercloud/v2/testhelper/client"
 )
 
 func getClient(microVersion string) *gophercloud.ServiceClient {

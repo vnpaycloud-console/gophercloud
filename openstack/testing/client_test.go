@@ -6,9 +6,9 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/vnpaycloud-console/gophercloud/v2"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
+	"github.com/gophercloud/gophercloud/v2"
+	"github.com/gophercloud/gophercloud/v2/openstack"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
 )
 
 const ID = "0123456789"

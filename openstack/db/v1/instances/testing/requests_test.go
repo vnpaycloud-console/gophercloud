@@ -4,12 +4,12 @@ import (
 	"context"
 	"testing"
 
-	db "github.com/vnpaycloud-console/gophercloud/v2/openstack/db/v1/databases"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/db/v1/instances"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/db/v1/users"
-	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
-	fake "github.com/vnpaycloud-console/gophercloud/v2/testhelper/client"
+	db "github.com/gophercloud/gophercloud/v2/openstack/db/v1/databases"
+	"github.com/gophercloud/gophercloud/v2/openstack/db/v1/instances"
+	"github.com/gophercloud/gophercloud/v2/openstack/db/v1/users"
+	"github.com/gophercloud/gophercloud/v2/pagination"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
+	fake "github.com/gophercloud/gophercloud/v2/testhelper/client"
 )
 
 func TestCreate(t *testing.T) {

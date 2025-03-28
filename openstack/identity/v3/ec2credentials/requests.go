@@ -3,8 +3,8 @@ package ec2credentials
 import (
 	"context"
 
-	"github.com/vnpaycloud-console/gophercloud/v2"
-	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
+	"github.com/gophercloud/gophercloud/v2"
+	"github.com/gophercloud/gophercloud/v2/pagination"
 )
 
 // List enumerates the Credentials to which the current token has access.

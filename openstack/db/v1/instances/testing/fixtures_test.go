@@ -5,10 +5,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/vnpaycloud-console/gophercloud/v2"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/db/v1/datastores"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/db/v1/instances"
-	"github.com/vnpaycloud-console/gophercloud/v2/testhelper/fixture"
+	"github.com/gophercloud/gophercloud/v2"
+	"github.com/gophercloud/gophercloud/v2/openstack/db/v1/datastores"
+	"github.com/gophercloud/gophercloud/v2/openstack/db/v1/instances"
+	"github.com/gophercloud/gophercloud/v2/testhelper/fixture"
 )
 
 var (

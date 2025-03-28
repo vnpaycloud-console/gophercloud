@@ -5,7 +5,7 @@ import (
 	"math"
 	"strconv"
 
-	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
+	"github.com/gophercloud/gophercloud/v2/pagination"
 )
 
 // Capabilities represents the information of an individual StoragePool.

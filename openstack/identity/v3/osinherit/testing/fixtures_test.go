@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"testing"
 
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
-	fake "github.com/vnpaycloud-console/gophercloud/v2/testhelper/client"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
+	fake "github.com/gophercloud/gophercloud/v2/testhelper/client"
 )
 
 func HandleAssignSuccessfully(t *testing.T) {

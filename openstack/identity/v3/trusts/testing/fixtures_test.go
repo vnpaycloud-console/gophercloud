@@ -6,9 +6,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/identity/v3/trusts"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
-	"github.com/vnpaycloud-console/gophercloud/v2/testhelper/client"
+	"github.com/gophercloud/gophercloud/v2/openstack/identity/v3/trusts"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
+	"github.com/gophercloud/gophercloud/v2/testhelper/client"
 )
 
 const CreateRequest = `

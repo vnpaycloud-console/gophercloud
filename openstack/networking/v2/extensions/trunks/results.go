@@ -3,8 +3,8 @@ package trunks
 import (
 	"time"
 
-	"github.com/vnpaycloud-console/gophercloud/v2"
-	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
+	"github.com/gophercloud/gophercloud/v2"
+	"github.com/gophercloud/gophercloud/v2/pagination"
 )
 
 type Subport struct {
@@ -81,7 +81,6 @@ type Trunk struct {
 	// if the resource has not been updated, this field will show as null.
 	UpdatedAt time.Time `json:"updated_at"`
 
-	// RevisionNumber optionally set via extensions/standard-attr-revisions
 	RevisionNumber int `json:"revision_number"`
 
 	// UUID of the trunk's parent port

@@ -6,11 +6,11 @@ import (
 	"context"
 	"testing"
 
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/clients"
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/tools"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
+	"github.com/gophercloud/gophercloud/v2/internal/acceptance/clients"
+	"github.com/gophercloud/gophercloud/v2/internal/acceptance/tools"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
 
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/sharedfilesystems/v2/sharetransfers"
+	"github.com/gophercloud/gophercloud/v2/openstack/sharedfilesystems/v2/sharetransfers"
 )
 
 // minimal microversion for the share transfers

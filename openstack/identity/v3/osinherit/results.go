@@ -1,6 +1,6 @@
 package osinherit
 
-import "github.com/vnpaycloud-console/gophercloud/v2"
+import "github.com/gophercloud/gophercloud/v2"
 
 // AssignmentResult represents the result of an assign operation.
 // Call ExtractErr method to determine if the request succeeded or failed.

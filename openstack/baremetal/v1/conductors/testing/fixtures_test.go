@@ -6,9 +6,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/baremetal/v1/conductors"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
-	"github.com/vnpaycloud-console/gophercloud/v2/testhelper/client"
+	"github.com/gophercloud/gophercloud/v2/openstack/baremetal/v1/conductors"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
+	"github.com/gophercloud/gophercloud/v2/testhelper/client"
 )
 
 // ConductorListBody contains the canned body of a conductor.List response, without detail.

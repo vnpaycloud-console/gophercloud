@@ -6,11 +6,11 @@ import (
 	"context"
 	"testing"
 
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/clients"
-	networking "github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/openstack/networking/v2"
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/tools"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/networking/v2/extensions/fwaas_v2/policies"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
+	"github.com/gophercloud/gophercloud/v2/internal/acceptance/clients"
+	networking "github.com/gophercloud/gophercloud/v2/internal/acceptance/openstack/networking/v2"
+	"github.com/gophercloud/gophercloud/v2/internal/acceptance/tools"
+	"github.com/gophercloud/gophercloud/v2/openstack/networking/v2/extensions/fwaas_v2/policies"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
 )
 
 func TestPolicyCRUD(t *testing.T) {

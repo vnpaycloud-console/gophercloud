@@ -2,10 +2,9 @@ package subnetpools
 
 import (
 	"context"
-	"fmt"
 
-	"github.com/vnpaycloud-console/gophercloud/v2"
-	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
+	"github.com/gophercloud/gophercloud/v2"
+	"github.com/gophercloud/gophercloud/v2/pagination"
 )
 
 // ListOptsBuilder allows extensions to add additional parameters to the
@@ -34,6 +33,7 @@ type ListOpts struct {
 	Shared           *bool  `q:"shared"`
 	Description      string `q:"description"`
 	IsDefault        *bool  `q:"is_default"`
+	RevisionNumber   int    `q:"revision_number"`
 	Limit            int    `q:"limit"`
 	Marker           string `q:"marker"`
 	SortKey          string `q:"sort_key"`
@@ -42,8 +42,6 @@ type ListOpts struct {
 	TagsAny          string `q:"tags-any"`
 	NotTags          string `q:"not-tags"`
 	NotTagsAny       string `q:"not-tags-any"`
-	// type int does not allow to filter with revision_number=0
-	RevisionNumber int `q:"revision_number"`
 }
 
 // ToSubnetPoolListQuery formats a ListOpts into a query string.
@@ -203,11 +201,6 @@ type UpdateOpts struct {
 
 	// IsDefault indicates if the subnetpool is default pool or not.
 	IsDefault *bool `json:"is_default,omitempty"`
-
-	// RevisionNumber implements extension:standard-attr-revisions. If != "" it
-	// will set revision_number=%s. If the revision number does not match, the
-	// update will fail.
-	RevisionNumber *int `json:"-" h:"If-Match"`
 }
 
 // ToSubnetPoolUpdateMap builds a request body from UpdateOpts.
@@ -223,19 +216,8 @@ func Update(ctx context.Context, c *gophercloud.ServiceClient, subnetPoolID stri
 		r.Err = err
 		return
 	}
-	h, err := gophercloud.BuildHeaders(opts)
-	if err != nil {
-		r.Err = err
-		return
-	}
-	for k := range h {
-		if k == "If-Match" {
-			h[k] = fmt.Sprintf("revision_number=%s", h[k])
-		}
-	}
 	resp, err := c.Put(ctx, updateURL(c, subnetPoolID), b, &r.Body, &gophercloud.RequestOpts{
-		MoreHeaders: h,
-		OkCodes:     []int{200},
+		OkCodes: []int{200},
 	})
 	_, r.Header, r.Err = gophercloud.ParseResponse(resp, err)
 	return

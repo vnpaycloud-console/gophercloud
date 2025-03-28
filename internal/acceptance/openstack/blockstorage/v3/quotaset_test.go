@@ -7,12 +7,12 @@ import (
 	"os"
 	"testing"
 
-	"github.com/vnpaycloud-console/gophercloud/v2"
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/clients"
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/tools"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/blockstorage/v3/quotasets"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/blockstorage/v3/volumetypes"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
+	"github.com/gophercloud/gophercloud/v2"
+	"github.com/gophercloud/gophercloud/v2/internal/acceptance/clients"
+	"github.com/gophercloud/gophercloud/v2/internal/acceptance/tools"
+	"github.com/gophercloud/gophercloud/v2/openstack/blockstorage/v3/quotasets"
+	"github.com/gophercloud/gophercloud/v2/openstack/blockstorage/v3/volumetypes"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
 )
 
 func TestQuotasetGet(t *testing.T) {
@@ -46,7 +46,6 @@ func TestQuotasetGetUsage(t *testing.T) {
 	th.AssertNoErr(t, err)
 
 	tools.PrintResource(t, quotaSetUsage)
-	tools.PrintResource(t, quotaSetUsage.Extra)
 }
 
 var UpdateQuotaOpts = quotasets.UpdateOpts{

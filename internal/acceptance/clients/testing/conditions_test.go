@@ -7,7 +7,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/clients"
+	"github.com/gophercloud/gophercloud/v2/internal/acceptance/clients"
 )
 
 func TestIsCurrentAbove(t *testing.T) {

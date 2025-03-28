@@ -11,22 +11,22 @@ import (
 	"testing"
 	"time"
 
-	"github.com/vnpaycloud-console/gophercloud/v2"
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/clients"
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/tools"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/blockstorage/v2/volumes"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/compute/v2/aggregates"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/compute/v2/attachinterfaces"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/compute/v2/flavors"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/compute/v2/keypairs"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/compute/v2/quotasets"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/compute/v2/remoteconsoles"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/compute/v2/secgroups"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/compute/v2/servergroups"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/compute/v2/servers"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/compute/v2/volumeattach"
-	neutron "github.com/vnpaycloud-console/gophercloud/v2/openstack/networking/v2/networks"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
+	"github.com/gophercloud/gophercloud/v2"
+	"github.com/gophercloud/gophercloud/v2/internal/acceptance/clients"
+	"github.com/gophercloud/gophercloud/v2/internal/acceptance/tools"
+	"github.com/gophercloud/gophercloud/v2/openstack/blockstorage/v2/volumes"
+	"github.com/gophercloud/gophercloud/v2/openstack/compute/v2/aggregates"
+	"github.com/gophercloud/gophercloud/v2/openstack/compute/v2/attachinterfaces"
+	"github.com/gophercloud/gophercloud/v2/openstack/compute/v2/flavors"
+	"github.com/gophercloud/gophercloud/v2/openstack/compute/v2/keypairs"
+	"github.com/gophercloud/gophercloud/v2/openstack/compute/v2/quotasets"
+	"github.com/gophercloud/gophercloud/v2/openstack/compute/v2/remoteconsoles"
+	"github.com/gophercloud/gophercloud/v2/openstack/compute/v2/secgroups"
+	"github.com/gophercloud/gophercloud/v2/openstack/compute/v2/servergroups"
+	"github.com/gophercloud/gophercloud/v2/openstack/compute/v2/servers"
+	"github.com/gophercloud/gophercloud/v2/openstack/compute/v2/volumeattach"
+	neutron "github.com/gophercloud/gophercloud/v2/openstack/networking/v2/networks"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
 
 	"golang.org/x/crypto/ssh"
 )
@@ -685,17 +685,19 @@ func CreateServerWithPublicKey(t *testing.T, client *gophercloud.ServiceClient, 
 	name := tools.RandomString("ACPTTEST", 16)
 	t.Logf("Attempting to create server: %s", name)
 
-	createOpts := servers.CreateOpts{
+	serverCreateOpts := servers.CreateOpts{
 		Name:      name,
 		FlavorRef: choices.FlavorID,
 		ImageRef:  choices.ImageID,
 		Networks: []servers.Network{
 			{UUID: networkID},
 		},
-		KeyName: keyPairName,
 	}
 
-	server, err := servers.Create(context.TODO(), client, createOpts, nil).Extract()
+	server, err := servers.Create(context.TODO(), client, keypairs.CreateOptsExt{
+		CreateOptsBuilder: serverCreateOpts,
+		KeyName:           keyPairName,
+	}, nil).Extract()
 	if err != nil {
 		return nil, err
 	}

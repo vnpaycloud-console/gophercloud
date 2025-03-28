@@ -5,10 +5,10 @@ package v2
 import (
 	"testing"
 
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/clients"
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/tools"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/workflow/v2/executions"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
+	"github.com/gophercloud/gophercloud/v2/internal/acceptance/clients"
+	"github.com/gophercloud/gophercloud/v2/internal/acceptance/tools"
+	"github.com/gophercloud/gophercloud/v2/openstack/workflow/v2/executions"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
 )
 
 func TestExecutionsCreate(t *testing.T) {

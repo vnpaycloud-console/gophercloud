@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"time"
 
-	"github.com/vnpaycloud-console/gophercloud/v2"
-	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
+	"github.com/gophercloud/gophercloud/v2"
+	"github.com/gophercloud/gophercloud/v2/pagination"
 )
 
 // FloatingIP represents a floating IP resource. A floating IP is an external
@@ -56,9 +56,6 @@ type FloatingIP struct {
 
 	// Tags optionally set via extensions/attributestags
 	Tags []string `json:"tags"`
-
-	// RevisionNumber optionally set via extensions/standard-attr-revisions
-	RevisionNumber int `json:"revision_number"`
 }
 
 func (r *FloatingIP) UnmarshalJSON(b []byte) error {

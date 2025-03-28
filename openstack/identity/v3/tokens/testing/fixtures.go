@@ -6,9 +6,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/vnpaycloud-console/gophercloud/v2"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/identity/v3/tokens"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
+	"github.com/gophercloud/gophercloud/v2"
+	"github.com/gophercloud/gophercloud/v2/openstack/identity/v3/tokens"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
 )
 
 const testTokenID = "130f6c17-420e-4a0b-97b0-0c9cf2a05f30"

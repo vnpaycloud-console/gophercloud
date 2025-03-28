@@ -6,11 +6,11 @@ import (
 	"context"
 	"testing"
 
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/clients"
-	identity "github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/openstack/identity/v3"
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/tools"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/blockstorage/v3/volumetypes"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
+	"github.com/gophercloud/gophercloud/v2/internal/acceptance/clients"
+	identity "github.com/gophercloud/gophercloud/v2/internal/acceptance/openstack/identity/v3"
+	"github.com/gophercloud/gophercloud/v2/internal/acceptance/tools"
+	"github.com/gophercloud/gophercloud/v2/openstack/blockstorage/v3/volumetypes"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
 )
 
 func TestVolumeTypes(t *testing.T) {

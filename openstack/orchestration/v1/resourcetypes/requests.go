@@ -3,7 +3,7 @@ package resourcetypes
 import (
 	"context"
 
-	"github.com/vnpaycloud-console/gophercloud/v2"
+	"github.com/gophercloud/gophercloud/v2"
 )
 
 // SupportStatus is a type for specifying by which support status to filter the

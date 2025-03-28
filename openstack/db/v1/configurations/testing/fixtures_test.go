@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/vnpaycloud-console/gophercloud/v2"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/db/v1/configurations"
+	"github.com/gophercloud/gophercloud/v2"
+	"github.com/gophercloud/gophercloud/v2/openstack/db/v1/configurations"
 )
 
 var (

@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"time"
 
-	"github.com/vnpaycloud-console/gophercloud/v2"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/networking/v2/extensions/security/rules"
-	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
+	"github.com/gophercloud/gophercloud/v2"
+	"github.com/gophercloud/gophercloud/v2/openstack/networking/v2/extensions/security/rules"
+	"github.com/gophercloud/gophercloud/v2/pagination"
 )
 
 // SecGroup represents a container for security group rules.
@@ -41,9 +41,6 @@ type SecGroup struct {
 
 	// Tags optionally set via extensions/attributestags
 	Tags []string `json:"tags"`
-
-	// RevisionNumber optionally set via extensions/standard-attr-revisions
-	RevisionNumber int `json:"revision_number"`
 }
 
 func (r *SecGroup) UnmarshalJSON(b []byte) error {

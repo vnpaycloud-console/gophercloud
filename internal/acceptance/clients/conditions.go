@@ -119,7 +119,7 @@ func getReleaseFromEnv(t *testing.T) string {
 // release. Releases are named such as 'stable/mitaka', master, etc.
 func SkipRelease(t *testing.T, release string) {
 	current := getReleaseFromEnv(t)
-	if current == strings.TrimPrefix(release, "stable/") {
+	if current == release {
 		t.Skipf("this is not supported in %s", release)
 	}
 }

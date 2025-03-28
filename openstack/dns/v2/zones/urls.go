@@ -1,6 +1,6 @@
 package zones
 
-import "github.com/vnpaycloud-console/gophercloud/v2"
+import "github.com/gophercloud/gophercloud/v2"
 
 // baseURL returns the base URL for zones.
 func baseURL(c *gophercloud.ServiceClient) string {

@@ -6,9 +6,9 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/networking/v2/extensions/qos/ruletypes"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
-	fake "github.com/vnpaycloud-console/gophercloud/v2/testhelper/client"
+	"github.com/gophercloud/gophercloud/v2/openstack/networking/v2/extensions/qos/ruletypes"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
+	fake "github.com/gophercloud/gophercloud/v2/testhelper/client"
 )
 
 func TestListRuleTypes(t *testing.T) {

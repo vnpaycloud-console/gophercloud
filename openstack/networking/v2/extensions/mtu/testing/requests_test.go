@@ -3,9 +3,9 @@ package testing
 import (
 	"testing"
 
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/networking/v2/extensions/mtu"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/networking/v2/networks"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
+	"github.com/gophercloud/gophercloud/v2/openstack/networking/v2/extensions/mtu"
+	"github.com/gophercloud/gophercloud/v2/openstack/networking/v2/networks"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
 )
 
 func TestListExternal(t *testing.T) {

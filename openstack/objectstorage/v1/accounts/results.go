@@ -5,7 +5,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/vnpaycloud-console/gophercloud/v2"
+	"github.com/gophercloud/gophercloud/v2"
 )
 
 // UpdateResult is returned from a call to the Update function.

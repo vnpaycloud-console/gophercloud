@@ -3,9 +3,9 @@ package extensions
 import (
 	"context"
 
-	"github.com/vnpaycloud-console/gophercloud/v2"
-	common "github.com/vnpaycloud-console/gophercloud/v2/openstack/common/extensions"
-	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
+	"github.com/gophercloud/gophercloud/v2"
+	common "github.com/gophercloud/gophercloud/v2/openstack/common/extensions"
+	"github.com/gophercloud/gophercloud/v2/pagination"
 )
 
 // ExtractExtensions interprets a Page as a slice of Extensions.

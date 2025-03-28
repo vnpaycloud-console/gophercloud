@@ -5,10 +5,10 @@ import (
 	"testing"
 	"time"
 
-	fake "github.com/vnpaycloud-console/gophercloud/v2/openstack/networking/v2/common"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/networking/v2/extensions/portsbinding"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/networking/v2/ports"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
+	fake "github.com/gophercloud/gophercloud/v2/openstack/networking/v2/common"
+	"github.com/gophercloud/gophercloud/v2/openstack/networking/v2/extensions/portsbinding"
+	"github.com/gophercloud/gophercloud/v2/openstack/networking/v2/ports"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
 )
 
 func TestList(t *testing.T) {

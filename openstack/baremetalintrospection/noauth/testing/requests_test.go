@@ -3,8 +3,8 @@ package testing
 import (
 	"testing"
 
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/baremetalintrospection/noauth"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
+	"github.com/gophercloud/gophercloud/v2/openstack/baremetalintrospection/noauth"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
 )
 
 func TestNoAuth(t *testing.T) {

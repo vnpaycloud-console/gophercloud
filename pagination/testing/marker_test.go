@@ -7,8 +7,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
+	"github.com/gophercloud/gophercloud/v2/pagination"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
 )
 
 // MarkerPager sample and test cases.

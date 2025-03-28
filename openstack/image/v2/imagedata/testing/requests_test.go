@@ -6,9 +6,9 @@ import (
 	"io"
 	"testing"
 
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/image/v2/imagedata"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
-	fakeclient "github.com/vnpaycloud-console/gophercloud/v2/testhelper/client"
+	"github.com/gophercloud/gophercloud/v2/openstack/image/v2/imagedata"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
+	fakeclient "github.com/gophercloud/gophercloud/v2/testhelper/client"
 )
 
 func TestUpload(t *testing.T) {

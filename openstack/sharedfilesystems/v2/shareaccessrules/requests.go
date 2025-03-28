@@ -3,7 +3,7 @@ package shareaccessrules
 import (
 	"context"
 
-	"github.com/vnpaycloud-console/gophercloud/v2"
+	"github.com/gophercloud/gophercloud/v2"
 )
 
 // Get retrieves details about a share access rule.

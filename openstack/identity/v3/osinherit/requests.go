@@ -3,7 +3,7 @@ package osinherit
 import (
 	"context"
 
-	"github.com/vnpaycloud-console/gophercloud/v2"
+	"github.com/gophercloud/gophercloud/v2"
 )
 
 // AssignOpts provides options to assign an inherited role

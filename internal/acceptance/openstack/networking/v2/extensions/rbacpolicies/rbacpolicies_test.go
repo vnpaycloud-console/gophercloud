@@ -6,12 +6,12 @@ import (
 	"context"
 	"testing"
 
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/clients"
-	projects "github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/openstack/identity/v3"
-	networking "github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/openstack/networking/v2"
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/tools"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/networking/v2/extensions/rbacpolicies"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
+	"github.com/gophercloud/gophercloud/v2/internal/acceptance/clients"
+	projects "github.com/gophercloud/gophercloud/v2/internal/acceptance/openstack/identity/v3"
+	networking "github.com/gophercloud/gophercloud/v2/internal/acceptance/openstack/networking/v2"
+	"github.com/gophercloud/gophercloud/v2/internal/acceptance/tools"
+	"github.com/gophercloud/gophercloud/v2/openstack/networking/v2/extensions/rbacpolicies"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
 )
 
 func TestRBACPolicyCRUD(t *testing.T) {

@@ -3,8 +3,8 @@ package testing
 import (
 	"fmt"
 
-	"github.com/vnpaycloud-console/gophercloud/v2"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/db/v1/datastores"
+	"github.com/gophercloud/gophercloud/v2"
+	"github.com/gophercloud/gophercloud/v2/openstack/db/v1/datastores"
 )
 
 const version1JSON = `

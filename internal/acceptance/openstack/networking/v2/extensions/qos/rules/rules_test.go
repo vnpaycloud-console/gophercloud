@@ -6,13 +6,13 @@ import (
 	"context"
 	"testing"
 
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/clients"
-	v2 "github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/openstack/networking/v2"
-	accpolicies "github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/openstack/networking/v2/extensions/qos/policies"
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/tools"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/networking/v2/extensions/qos/policies"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/networking/v2/extensions/qos/rules"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
+	"github.com/gophercloud/gophercloud/v2/internal/acceptance/clients"
+	v2 "github.com/gophercloud/gophercloud/v2/internal/acceptance/openstack/networking/v2"
+	accpolicies "github.com/gophercloud/gophercloud/v2/internal/acceptance/openstack/networking/v2/extensions/qos/policies"
+	"github.com/gophercloud/gophercloud/v2/internal/acceptance/tools"
+	"github.com/gophercloud/gophercloud/v2/openstack/networking/v2/extensions/qos/policies"
+	"github.com/gophercloud/gophercloud/v2/openstack/networking/v2/extensions/qos/rules"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
 )
 
 func TestBandwidthLimitRulesCRUD(t *testing.T) {

@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"testing"
 
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
-	fakeclient "github.com/vnpaycloud-console/gophercloud/v2/testhelper/client"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
+	fakeclient "github.com/gophercloud/gophercloud/v2/testhelper/client"
 )
 
 // HandlePutImageDataSuccessfully setup

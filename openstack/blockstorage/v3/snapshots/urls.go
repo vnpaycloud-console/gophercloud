@@ -1,6 +1,6 @@
 package snapshots
 
-import "github.com/vnpaycloud-console/gophercloud/v2"
+import "github.com/gophercloud/gophercloud/v2"
 
 func createURL(c *gophercloud.ServiceClient) string {
 	return c.ServiceURL("snapshots")
@@ -16,10 +16,6 @@ func getURL(c *gophercloud.ServiceClient, id string) string {
 
 func listURL(c *gophercloud.ServiceClient) string {
 	return createURL(c)
-}
-
-func listDetailsURL(c *gophercloud.ServiceClient) string {
-	return c.ServiceURL("snapshots", "detail")
 }
 
 func updateURL(c *gophercloud.ServiceClient, id string) string {

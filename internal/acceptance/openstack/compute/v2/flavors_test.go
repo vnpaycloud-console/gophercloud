@@ -6,11 +6,11 @@ import (
 	"context"
 	"testing"
 
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/clients"
-	identity "github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/openstack/identity/v3"
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/tools"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/compute/v2/flavors"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
+	"github.com/gophercloud/gophercloud/v2/internal/acceptance/clients"
+	identity "github.com/gophercloud/gophercloud/v2/internal/acceptance/openstack/identity/v3"
+	"github.com/gophercloud/gophercloud/v2/internal/acceptance/tools"
+	"github.com/gophercloud/gophercloud/v2/openstack/compute/v2/flavors"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
 )
 
 func TestFlavorsList(t *testing.T) {
@@ -135,7 +135,7 @@ func TestFlavorsCreateUpdateDelete(t *testing.T) {
 
 	newFlavorDescription := "This is the new description"
 	updateOpts := flavors.UpdateOpts{
-		Description: &newFlavorDescription,
+		Description: newFlavorDescription,
 	}
 
 	flavor, err = flavors.Update(context.TODO(), client, flavor.ID, updateOpts).Extract()

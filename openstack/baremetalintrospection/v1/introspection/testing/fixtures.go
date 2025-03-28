@@ -6,12 +6,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/vnpaycloud-console/gophercloud/v2"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/baremetal/inventory"
-	inventorytesting "github.com/vnpaycloud-console/gophercloud/v2/openstack/baremetal/inventory/testing"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/baremetalintrospection/v1/introspection"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
-	"github.com/vnpaycloud-console/gophercloud/v2/testhelper/client"
+	"github.com/gophercloud/gophercloud/v2"
+	"github.com/gophercloud/gophercloud/v2/openstack/baremetal/inventory"
+	inventorytesting "github.com/gophercloud/gophercloud/v2/openstack/baremetal/inventory/testing"
+	"github.com/gophercloud/gophercloud/v2/openstack/baremetalintrospection/v1/introspection"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
+	"github.com/gophercloud/gophercloud/v2/testhelper/client"
 )
 
 // IntrospectionListBody contains the canned body of a introspection.IntrospectionList response.

@@ -6,13 +6,12 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/ptr"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/loadbalancer/v2/flavors"
-	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
+	"github.com/gophercloud/gophercloud/v2/openstack/loadbalancer/v2/flavors"
+	"github.com/gophercloud/gophercloud/v2/pagination"
 
-	fake "github.com/vnpaycloud-console/gophercloud/v2/openstack/loadbalancer/v2/testhelper"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
-	"github.com/vnpaycloud-console/gophercloud/v2/testhelper/client"
+	fake "github.com/gophercloud/gophercloud/v2/openstack/loadbalancer/v2/testhelper"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
+	"github.com/gophercloud/gophercloud/v2/testhelper/client"
 )
 
 func TestListFlavors(t *testing.T) {
@@ -110,28 +109,12 @@ func TestCreateFlavor(t *testing.T) {
 	actual, err := flavors.Create(context.TODO(), fake.ServiceClient(), flavors.CreateOpts{
 		Name:            "Basic",
 		Description:     "A basic standalone Octavia load balancer.",
-		Enabled:         ptr.To(true),
+		Enabled:         true,
 		FlavorProfileId: "9daa2768-74e7-4d13-bf5d-1b8e0dc239e1",
 	}).Extract()
 	th.AssertNoErr(t, err)
 
 	th.CheckDeepEquals(t, FlavorDb, *actual)
-}
-
-func TestCreateFlavorDisabled(t *testing.T) {
-	th.SetupHTTP()
-	defer th.TeardownHTTP()
-	HandleFlavorCreationSuccessfullyDisabled(t, SingleFlavorDisabledBody)
-
-	actual, err := flavors.Create(context.TODO(), fake.ServiceClient(), flavors.CreateOpts{
-		Name:            "Basic",
-		Description:     "A basic standalone Octavia load balancer.",
-		Enabled:         ptr.To(false),
-		FlavorProfileId: "9daa2768-74e7-4d13-bf5d-1b8e0dc239e1",
-	}).Extract()
-	th.AssertNoErr(t, err)
-
-	th.CheckDeepEquals(t, FlavorDisabled, *actual)
 }
 
 func TestRequiredCreateOpts(t *testing.T) {
@@ -171,9 +154,9 @@ func TestUpdateFlavor(t *testing.T) {
 
 	client := fake.ServiceClient()
 	actual, err := flavors.Update(context.TODO(), client, "5548c807-e6e8-43d7-9ea4-b38d34dd74a0", flavors.UpdateOpts{
-		Name:        ptr.To("Basic v2"),
-		Description: ptr.To("Rename flavor"),
-		Enabled:     ptr.To(true),
+		Name:        "Basic v2",
+		Description: "Rename flavor",
+		Enabled:     true,
 	}).Extract()
 	if err != nil {
 		t.Fatalf("Unexpected Update error: %v", err)

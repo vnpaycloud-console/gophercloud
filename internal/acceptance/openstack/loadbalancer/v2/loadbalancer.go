@@ -7,18 +7,17 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/vnpaycloud-console/gophercloud/v2"
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/clients"
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/tools"
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/ptr"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/loadbalancer/v2/flavorprofiles"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/loadbalancer/v2/flavors"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/loadbalancer/v2/l7policies"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/loadbalancer/v2/listeners"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/loadbalancer/v2/loadbalancers"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/loadbalancer/v2/monitors"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/loadbalancer/v2/pools"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
+	"github.com/gophercloud/gophercloud/v2"
+	"github.com/gophercloud/gophercloud/v2/internal/acceptance/clients"
+	"github.com/gophercloud/gophercloud/v2/internal/acceptance/tools"
+	"github.com/gophercloud/gophercloud/v2/openstack/loadbalancer/v2/flavorprofiles"
+	"github.com/gophercloud/gophercloud/v2/openstack/loadbalancer/v2/flavors"
+	"github.com/gophercloud/gophercloud/v2/openstack/loadbalancer/v2/l7policies"
+	"github.com/gophercloud/gophercloud/v2/openstack/loadbalancer/v2/listeners"
+	"github.com/gophercloud/gophercloud/v2/openstack/loadbalancer/v2/loadbalancers"
+	"github.com/gophercloud/gophercloud/v2/openstack/loadbalancer/v2/monitors"
+	"github.com/gophercloud/gophercloud/v2/openstack/loadbalancer/v2/pools"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
 )
 
 // CreateListener will create a listener for a given load balancer on a random
@@ -725,7 +724,7 @@ func CreateFlavor(t *testing.T, client *gophercloud.ServiceClient, flavorProfile
 		Name:            flavorName,
 		Description:     description,
 		FlavorProfileId: flavorProfile.ID,
-		Enabled:         ptr.To(false),
+		Enabled:         true,
 	}
 
 	flavor, err := flavors.Create(context.TODO(), client, createOpts).Extract()
@@ -738,7 +737,7 @@ func CreateFlavor(t *testing.T, client *gophercloud.ServiceClient, flavorProfile
 	th.AssertEquals(t, flavorName, flavor.Name)
 	th.AssertEquals(t, description, flavor.Description)
 	th.AssertEquals(t, flavorProfile.ID, flavor.FlavorProfileId)
-	th.AssertEquals(t, false, flavor.Enabled)
+	th.AssertEquals(t, true, flavor.Enabled)
 
 	return flavor, nil
 }

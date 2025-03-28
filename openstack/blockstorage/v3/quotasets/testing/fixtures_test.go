@@ -5,10 +5,10 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/vnpaycloud-console/gophercloud/v2"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/blockstorage/v3/quotasets"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
-	"github.com/vnpaycloud-console/gophercloud/v2/testhelper/client"
+	"github.com/gophercloud/gophercloud/v2"
+	"github.com/gophercloud/gophercloud/v2/openstack/blockstorage/v3/quotasets"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
+	"github.com/gophercloud/gophercloud/v2/testhelper/client"
 )
 
 const FirstTenantID = "555544443333222211110000ffffeeee"
@@ -75,23 +75,8 @@ var getUsageExpectedJSONBody = `
             "in_use": 40,
             "limit": 41,
             "reserved": 42
-        },
-        "gigabytes_hdd" : {
-            "in_use": 50,
-            "limit": 51,
-            "reserved": 52
-        },
-        "volumes_hdd" : {
-            "in_use": 53,
-            "limit": 54,
-            "reserved": 55
-        },
-        "snapshots_hdd": {
-            "in_use": 56,
-            "limit": 57,
-            "reserved": 58
         }
-    }
+	}
 }`
 
 var getUsageExpectedQuotaSet = quotasets.QuotaUsageSet{
@@ -103,11 +88,6 @@ var getUsageExpectedQuotaSet = quotasets.QuotaUsageSet{
 	Backups:            quotasets.QuotaUsage{InUse: 27, Limit: 28, Reserved: 29},
 	BackupGigabytes:    quotasets.QuotaUsage{InUse: 30, Limit: 31, Reserved: 32},
 	Groups:             quotasets.QuotaUsage{InUse: 40, Limit: 41, Reserved: 42},
-	Extra: map[string]quotasets.QuotaUsage{
-		"gigabytes_hdd": {InUse: 50, Limit: 51, Reserved: 52},
-		"volumes_hdd":   {InUse: 53, Limit: 54, Reserved: 55},
-		"snapshots_hdd": {InUse: 56, Limit: 57, Reserved: 58},
-	},
 }
 
 var fullUpdateExpectedJSONBody = `
@@ -167,7 +147,7 @@ var partialUpdateOpts = quotasets.UpdateOpts{
 	Extra:              make(map[string]any),
 }
 
-var partialUpdateExpectedQuotaSet = quotasets.QuotaSet{
+var partiualUpdateExpectedQuotaSet = quotasets.QuotaSet{
 	Volumes: 200,
 	Extra:   make(map[string]any),
 }

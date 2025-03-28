@@ -4,10 +4,10 @@ import (
 	"context"
 	"testing"
 
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/compute/v2/hypervisors"
-	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
-	"github.com/vnpaycloud-console/gophercloud/v2/testhelper/client"
+	"github.com/gophercloud/gophercloud/v2/openstack/compute/v2/hypervisors"
+	"github.com/gophercloud/gophercloud/v2/pagination"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
+	"github.com/gophercloud/gophercloud/v2/testhelper/client"
 )
 
 func TestListHypervisorsPre253(t *testing.T) {
@@ -69,18 +69,19 @@ func TestListHypervisors(t *testing.T) {
 			return false, err
 		}
 
-		if len(actual) != 1 {
-			t.Fatalf("Expected 1 hypervisors on page %d, got %d", pages, len(actual))
+		if len(actual) != 2 {
+			t.Fatalf("Expected 2 hypervisors, got %d", len(actual))
 		}
 		th.CheckDeepEquals(t, HypervisorFake, actual[0])
+		th.CheckDeepEquals(t, HypervisorFake, actual[1])
 
 		return true, nil
 	})
 
 	th.AssertNoErr(t, err)
 
-	if pages != 2 {
-		t.Errorf("Expected 2 pages, saw %d", pages)
+	if pages != 1 {
+		t.Errorf("Expected 1 page, saw %d", pages)
 	}
 }
 

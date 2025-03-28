@@ -3,8 +3,8 @@ package policies
 import (
 	"time"
 
-	"github.com/vnpaycloud-console/gophercloud/v2"
-	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
+	"github.com/gophercloud/gophercloud/v2"
+	"github.com/gophercloud/gophercloud/v2/pagination"
 )
 
 // QoSPolicyExt represents additional resource attributes available with the QoS extension.
@@ -79,7 +79,7 @@ type Policy struct {
 	// Shared indicates whether this policy is shared across all projects.
 	Shared bool `json:"shared"`
 
-	// RevisionNumber optionally set via extensions/standard-attr-revisions
+	// RevisionNumber represents revision number of the policy.
 	RevisionNumber int `json:"revision_number"`
 
 	// Rules represents QoS rules of the policy.

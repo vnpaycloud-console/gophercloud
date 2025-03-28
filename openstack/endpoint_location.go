@@ -1,11 +1,9 @@
 package openstack
 
 import (
-	"slices"
-
-	"github.com/vnpaycloud-console/gophercloud/v2"
-	tokens2 "github.com/vnpaycloud-console/gophercloud/v2/openstack/identity/v2/tokens"
-	tokens3 "github.com/vnpaycloud-console/gophercloud/v2/openstack/identity/v3/tokens"
+	"github.com/gophercloud/gophercloud/v2"
+	tokens2 "github.com/gophercloud/gophercloud/v2/openstack/identity/v2/tokens"
+	tokens3 "github.com/gophercloud/gophercloud/v2/openstack/identity/v3/tokens"
 )
 
 /*
@@ -22,7 +20,7 @@ func V2EndpointURL(catalog *tokens2.ServiceCatalog, opts gophercloud.EndpointOpt
 	// Extract Endpoints from the catalog entries that match the requested Type, Name if provided, and Region if provided.
 	var endpoints = make([]tokens2.Endpoint, 0, 1)
 	for _, entry := range catalog.Entries {
-		if (slices.Contains(opts.Types(), entry.Type)) && (opts.Name == "" || entry.Name == opts.Name) {
+		if (entry.Type == opts.Type) && (opts.Name == "" || entry.Name == opts.Name) {
 			for _, endpoint := range entry.Endpoints {
 				if opts.Region == "" || endpoint.Region == opts.Region {
 					endpoints = append(endpoints, endpoint)
@@ -76,7 +74,7 @@ func V3EndpointURL(catalog *tokens3.ServiceCatalog, opts gophercloud.EndpointOpt
 	// Name if provided, and Region if provided.
 	var endpoints = make([]tokens3.Endpoint, 0, 1)
 	for _, entry := range catalog.Entries {
-		if (slices.Contains(opts.Types(), entry.Type)) && (opts.Name == "" || entry.Name == opts.Name) {
+		if (entry.Type == opts.Type) && (opts.Name == "" || entry.Name == opts.Name) {
 			for _, endpoint := range entry.Endpoints {
 				if opts.Availability != gophercloud.AvailabilityAdmin &&
 					opts.Availability != gophercloud.AvailabilityPublic &&

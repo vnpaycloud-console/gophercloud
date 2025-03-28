@@ -4,11 +4,10 @@ import (
 	"context"
 	"testing"
 
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/ptr"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/compute/v2/aggregates"
-	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
-	"github.com/vnpaycloud-console/gophercloud/v2/testhelper/client"
+	"github.com/gophercloud/gophercloud/v2/openstack/compute/v2/aggregates"
+	"github.com/gophercloud/gophercloud/v2/pagination"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
+	"github.com/gophercloud/gophercloud/v2/testhelper/client"
 )
 
 func TestListAggregates(t *testing.T) {
@@ -87,9 +86,10 @@ func TestUpdateAggregate(t *testing.T) {
 	HandleUpdateSuccessfully(t)
 
 	expected := UpdatedAggregate
+
 	opts := aggregates.UpdateOpts{
-		Name:             ptr.To("test-aggregates2"),
-		AvailabilityZone: ptr.To("nova2"),
+		Name:             "test-aggregates2",
+		AvailabilityZone: "nova2",
 	}
 
 	actual, err := aggregates.Update(context.TODO(), client.ServiceClient(), expected.ID, opts).Extract()

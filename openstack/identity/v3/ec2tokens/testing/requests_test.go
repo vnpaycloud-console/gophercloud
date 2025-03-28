@@ -8,11 +8,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/vnpaycloud-console/gophercloud/v2"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/identity/v3/ec2tokens"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/identity/v3/tokens"
-	tokens_testing "github.com/vnpaycloud-console/gophercloud/v2/openstack/identity/v3/tokens/testing"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
+	"github.com/gophercloud/gophercloud/v2"
+	"github.com/gophercloud/gophercloud/v2/openstack/identity/v3/ec2tokens"
+	"github.com/gophercloud/gophercloud/v2/openstack/identity/v3/tokens"
+	tokens_testing "github.com/gophercloud/gophercloud/v2/openstack/identity/v3/tokens/testing"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
 )
 
 // authTokenPost verifies that providing certain AuthOptions and Scope results in an expected JSON structure.

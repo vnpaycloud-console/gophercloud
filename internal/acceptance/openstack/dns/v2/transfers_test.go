@@ -6,12 +6,12 @@ import (
 	"context"
 	"testing"
 
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/clients"
-	identity "github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/openstack/identity/v3"
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/tools"
-	transferAccepts "github.com/vnpaycloud-console/gophercloud/v2/openstack/dns/v2/transfer/accept"
-	transferRequests "github.com/vnpaycloud-console/gophercloud/v2/openstack/dns/v2/transfer/request"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
+	"github.com/gophercloud/gophercloud/v2/internal/acceptance/clients"
+	identity "github.com/gophercloud/gophercloud/v2/internal/acceptance/openstack/identity/v3"
+	"github.com/gophercloud/gophercloud/v2/internal/acceptance/tools"
+	transferAccepts "github.com/gophercloud/gophercloud/v2/openstack/dns/v2/transfer/accept"
+	transferRequests "github.com/gophercloud/gophercloud/v2/openstack/dns/v2/transfer/request"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
 )
 
 func TestTransferRequestCRUD(t *testing.T) {

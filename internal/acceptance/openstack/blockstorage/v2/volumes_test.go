@@ -7,12 +7,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/clients"
-	compute "github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/openstack/compute/v2"
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/tools"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/blockstorage/v2/snapshots"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/blockstorage/v2/volumes"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
+	"github.com/gophercloud/gophercloud/v2/internal/acceptance/clients"
+	compute "github.com/gophercloud/gophercloud/v2/internal/acceptance/openstack/compute/v2"
+	"github.com/gophercloud/gophercloud/v2/internal/acceptance/tools"
+	"github.com/gophercloud/gophercloud/v2/openstack/blockstorage/v2/snapshots"
+	"github.com/gophercloud/gophercloud/v2/openstack/blockstorage/v2/volumes"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
 )
 
 func TestVolumesCreateDestroy(t *testing.T) {

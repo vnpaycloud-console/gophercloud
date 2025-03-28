@@ -3,8 +3,8 @@ package rules
 import (
 	"context"
 
-	"github.com/vnpaycloud-console/gophercloud/v2"
-	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
+	"github.com/gophercloud/gophercloud/v2"
+	"github.com/gophercloud/gophercloud/v2/pagination"
 )
 
 // ListOpts allows the filtering and sorting of paginated collections through
@@ -29,7 +29,6 @@ type ListOpts struct {
 	Marker         string `q:"marker"`
 	SortKey        string `q:"sort_key"`
 	SortDir        string `q:"sort_dir"`
-	RevisionNumber *int   `q:"revision_number"`
 }
 
 // List returns a Pager which allows you to iterate over a collection of
@@ -156,7 +155,7 @@ func Create(ctx context.Context, c *gophercloud.ServiceClient, opts CreateOptsBu
 // As of Dalmatian (2024.2) neutron only allows bulk creation of rules when
 // they all belong to the same tenant and security group.
 // https://github.com/openstack/neutron/blob/6183792/neutron/db/securitygroups_db.py#L814-L828
-func CreateBulk[createOpts CreateOptsBuilder](ctx context.Context, c *gophercloud.ServiceClient, opts []createOpts) (r CreateBulkResult) {
+func CreateBulk(ctx context.Context, c *gophercloud.ServiceClient, opts []CreateOpts) (r CreateBulkResult) {
 	body, err := gophercloud.BuildRequestBody(opts, "security_group_rules")
 	if err != nil {
 		r.Err = err

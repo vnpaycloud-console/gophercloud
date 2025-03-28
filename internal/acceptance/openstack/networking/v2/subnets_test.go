@@ -8,11 +8,11 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/clients"
-	subnetpools "github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/openstack/networking/v2/extensions/subnetpools"
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/tools"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/networking/v2/subnets"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
+	"github.com/gophercloud/gophercloud/v2/internal/acceptance/clients"
+	subnetpools "github.com/gophercloud/gophercloud/v2/internal/acceptance/openstack/networking/v2/extensions/subnetpools"
+	"github.com/gophercloud/gophercloud/v2/internal/acceptance/tools"
+	"github.com/gophercloud/gophercloud/v2/openstack/networking/v2/subnets"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
 )
 
 func TestSubnetCRUD(t *testing.T) {

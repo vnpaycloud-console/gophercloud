@@ -7,11 +7,10 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/ptr"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/compute/v2/flavors"
-	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
-	fake "github.com/vnpaycloud-console/gophercloud/v2/testhelper/client"
+	"github.com/gophercloud/gophercloud/v2/openstack/compute/v2/flavors"
+	"github.com/gophercloud/gophercloud/v2/pagination"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
+	fake "github.com/gophercloud/gophercloud/v2/testhelper/client"
 )
 
 func TestListFlavors(t *testing.T) {
@@ -243,7 +242,7 @@ func TestUpdateFlavor(t *testing.T) {
 	})
 
 	opts := &flavors.UpdateOpts{
-		Description: ptr.To("foo"),
+		Description: "foo",
 	}
 	actual, err := flavors.Update(context.TODO(), fake.ServiceClient(), "12345678", opts).Extract()
 	if err != nil {

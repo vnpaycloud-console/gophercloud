@@ -139,7 +139,7 @@ func (r Result) extractIntoPtr(to any, label string) error {
 
 				// jtopjian: This was put into place to resolve the issue
 				// described at
-				// https://github.com/vnpaycloud-console/gophercloud/issues/1963
+				// https://github.com/gophercloud/gophercloud/issues/1963
 				//
 				// This probably isn't the best fix, but it appears to
 				// be resolving the issue, so I'm going to implement it

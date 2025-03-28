@@ -1,6 +1,6 @@
 package recordsets
 
-import "github.com/vnpaycloud-console/gophercloud/v2"
+import "github.com/gophercloud/gophercloud/v2"
 
 func baseURL(c *gophercloud.ServiceClient, zoneID string) string {
 	return c.ServiceURL("zones", zoneID, "recordsets")

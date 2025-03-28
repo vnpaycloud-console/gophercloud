@@ -6,8 +6,8 @@ import (
 	"net/url"
 	"slices"
 
-	"github.com/vnpaycloud-console/gophercloud/v2"
-	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
+	"github.com/gophercloud/gophercloud/v2"
+	"github.com/gophercloud/gophercloud/v2/pagination"
 )
 
 // ListOptsBuilder allows extensions to add additional parameters to the
@@ -41,7 +41,6 @@ type ListOpts struct {
 	TagsAny        string   `q:"tags-any"`
 	NotTags        string   `q:"not-tags"`
 	NotTagsAny     string   `q:"not-tags-any"`
-	RevisionNumber *int     `q:"revision_number"`
 	SecurityGroups []string `q:"security_groups"`
 	FixedIPs       []FixedIPOpts
 }

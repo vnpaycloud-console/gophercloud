@@ -1,8 +1,8 @@
 package flavorprofiles
 
 import (
-	"github.com/vnpaycloud-console/gophercloud/v2"
-	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
+	"github.com/gophercloud/gophercloud/v2"
+	"github.com/gophercloud/gophercloud/v2/pagination"
 )
 
 // FlavorProfile provide metadata such as provider, toplogy and instance flavor.

@@ -5,10 +5,9 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/compute/v2/hypervisors"
-	"github.com/vnpaycloud-console/gophercloud/v2/testhelper"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
-	"github.com/vnpaycloud-console/gophercloud/v2/testhelper/client"
+	"github.com/gophercloud/gophercloud/v2/openstack/compute/v2/hypervisors"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
+	"github.com/gophercloud/gophercloud/v2/testhelper/client"
 )
 
 // HypervisorListBodyPre253 represents a raw hypervisor list from the Compute
@@ -86,8 +85,8 @@ const HypervisorListBodyPre253 = `
     ]
 }`
 
-// HypervisorListBodyPage1 represents page 1 of a raw hypervisor list result with Pike+ release.
-const HypervisorListBodyPage1 = `
+// HypervisorListBody represents a raw hypervisor list result with Pike+ release.
+const HypervisorListBody = `
 {
     "hypervisors": [
         {
@@ -128,20 +127,7 @@ const HypervisorListBodyPage1 = `
             },
             "vcpus": 1,
             "vcpus_used": 0
-        }
-    ],
-    "hypervisors_links": [
-        {
-            "href": "%s/os-hypervisors/detail?marker=c48f6247-abe4-4a24-824e-ea39e108874f",
-            "rel": "next"
-        }
-    ]
-}`
-
-// HypervisorListBodyPage2 represents page 2 of a raw hypervisor list result with Pike+ release.
-const HypervisorListBodyPage2 = `
-{
-    "hypervisors": [
+        },
         {
             "cpu_info": "{\"arch\": \"x86_64\", \"model\": \"Nehalem\", \"vendor\": \"Intel\", \"features\": [\"pge\", \"clflush\"], \"topology\": {\"cores\": 1, \"threads\": 1, \"sockets\": 4}}",
             "current_workload": 0,
@@ -170,9 +156,6 @@ const HypervisorListBodyPage2 = `
         }
     ]
 }`
-
-// HypervisorListBodyEmpty represents an empty raw hypervisor list result, marking the end of pagination.
-const HypervisorListBodyEmpty = `{ "hypervisors": [] }`
 
 // HypervisorListWithParametersBody represents a raw hypervisor list result with Pike+ release.
 const HypervisorListWithParametersBody = `
@@ -641,16 +624,8 @@ func HandleHypervisorListSuccessfully(t *testing.T) {
 		th.TestMethod(t, r, "GET")
 		th.TestHeader(t, r, "X-Auth-Token", client.TokenID)
 
-		switch r.URL.Query().Get("marker") {
-		case "":
-			w.Header().Add("Content-Type", "application/json")
-			fmt.Fprintf(w, HypervisorListBodyPage1, testhelper.Server.URL)
-		case "c48f6247-abe4-4a24-824e-ea39e108874f":
-			w.Header().Add("Content-Type", "application/json")
-			fmt.Fprint(w, HypervisorListBodyPage2)
-		default:
-			http.Error(w, "unexpected marker value", http.StatusInternalServerError)
-		}
+		w.Header().Add("Content-Type", "application/json")
+		fmt.Fprint(w, HypervisorListBody)
 	})
 }
 

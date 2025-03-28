@@ -3,8 +3,8 @@ package containers
 import (
 	"net/url"
 
-	"github.com/vnpaycloud-console/gophercloud/v2"
-	v1 "github.com/vnpaycloud-console/gophercloud/v2/openstack/objectstorage/v1"
+	"github.com/gophercloud/gophercloud/v2"
+	v1 "github.com/gophercloud/gophercloud/v2/openstack/objectstorage/v1"
 )
 
 func listURL(c *gophercloud.ServiceClient) string {

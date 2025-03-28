@@ -8,7 +8,7 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/vnpaycloud-console/gophercloud/v2"
+	"github.com/gophercloud/gophercloud/v2"
 )
 
 // PageResult stores the HTTP response that returned the current page of results.

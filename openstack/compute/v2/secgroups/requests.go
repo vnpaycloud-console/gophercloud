@@ -3,8 +3,8 @@ package secgroups
 import (
 	"context"
 
-	"github.com/vnpaycloud-console/gophercloud/v2"
-	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
+	"github.com/gophercloud/gophercloud/v2"
+	"github.com/gophercloud/gophercloud/v2/pagination"
 )
 
 func commonList(client *gophercloud.ServiceClient, url string) pagination.Pager {
@@ -61,7 +61,7 @@ func Create(ctx context.Context, client *gophercloud.ServiceClient, opts CreateO
 // UpdateOpts is the struct responsible for updating an existing security group.
 type UpdateOpts struct {
 	// the name of your security group.
-	Name *string `json:"name,omitempty"`
+	Name string `json:"name,omitempty"`
 	// the description of your security group.
 	Description *string `json:"description,omitempty"`
 }

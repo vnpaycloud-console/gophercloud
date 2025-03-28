@@ -3,9 +3,9 @@ package configurations
 import (
 	"context"
 
-	"github.com/vnpaycloud-console/gophercloud/v2"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/db/v1/instances"
-	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
+	"github.com/gophercloud/gophercloud/v2"
+	"github.com/gophercloud/gophercloud/v2/openstack/db/v1/instances"
+	"github.com/gophercloud/gophercloud/v2/pagination"
 )
 
 // List will list all of the available configurations.

@@ -3,7 +3,7 @@ package servers
 import (
 	"context"
 
-	"github.com/vnpaycloud-console/gophercloud/v2"
+	"github.com/gophercloud/gophercloud/v2"
 )
 
 // WaitForStatus will continually poll a server until it successfully

@@ -8,12 +8,12 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/vnpaycloud-console/gophercloud/v2"
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/clients"
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/tools"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/blockstorage/v3/snapshots"
-	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
+	"github.com/gophercloud/gophercloud/v2"
+	"github.com/gophercloud/gophercloud/v2/internal/acceptance/clients"
+	"github.com/gophercloud/gophercloud/v2/internal/acceptance/tools"
+	"github.com/gophercloud/gophercloud/v2/openstack/blockstorage/v3/snapshots"
+	"github.com/gophercloud/gophercloud/v2/pagination"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
 )
 
 func TestSnapshots(t *testing.T) {
@@ -73,24 +73,7 @@ func TestSnapshots(t *testing.T) {
 
 		return true, nil
 	})
-	th.AssertNoErr(t, err)
 
-	err = snapshots.ListDetail(client, listOpts).EachPage(context.TODO(), func(_ context.Context, page pagination.Page) (bool, error) {
-		actual, err := snapshots.ExtractSnapshots(page)
-		th.AssertNoErr(t, err)
-		th.AssertEquals(t, 1, len(actual))
-
-		var found bool
-		for _, v := range actual {
-			if v.ID == snapshot1.ID || v.ID == snapshot2.ID {
-				found = true
-			}
-		}
-
-		th.AssertEquals(t, found, true)
-
-		return true, nil
-	})
 	th.AssertNoErr(t, err)
 }
 

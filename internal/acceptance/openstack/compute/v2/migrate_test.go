@@ -6,9 +6,9 @@ import (
 	"context"
 	"testing"
 
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/clients"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/compute/v2/servers"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
+	"github.com/gophercloud/gophercloud/v2/internal/acceptance/clients"
+	"github.com/gophercloud/gophercloud/v2/openstack/compute/v2/servers"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
 )
 
 func TestMigrate(t *testing.T) {

@@ -1,7 +1,7 @@
 package limits
 
 import (
-	"github.com/vnpaycloud-console/gophercloud/v2"
+	"github.com/gophercloud/gophercloud/v2"
 )
 
 // Limits is a struct that contains the response of a limit query.

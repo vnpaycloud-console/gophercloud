@@ -3,7 +3,7 @@ package nodes
 import (
 	"context"
 
-	"github.com/vnpaycloud-console/gophercloud/v2"
+	"github.com/gophercloud/gophercloud/v2"
 )
 
 // WaitForProvisionState will continually poll a node until it successfully

@@ -6,11 +6,11 @@ import (
 	"context"
 	"testing"
 
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/clients"
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/tools"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/compute/v2/secgroups"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/compute/v2/servers"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
+	"github.com/gophercloud/gophercloud/v2/internal/acceptance/clients"
+	"github.com/gophercloud/gophercloud/v2/internal/acceptance/tools"
+	"github.com/gophercloud/gophercloud/v2/openstack/compute/v2/secgroups"
+	"github.com/gophercloud/gophercloud/v2/openstack/compute/v2/servers"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
 )
 
 func TestSecGroupsList(t *testing.T) {
@@ -48,7 +48,7 @@ func TestSecGroupsCRUD(t *testing.T) {
 	newName := tools.RandomString("secgroup_", 4)
 	description := ""
 	updateOpts := secgroups.UpdateOpts{
-		Name:        &newName,
+		Name:        newName,
 		Description: &description,
 	}
 	updatedSecurityGroup, err := secgroups.Update(context.TODO(), client, securityGroup.ID, updateOpts).Extract()

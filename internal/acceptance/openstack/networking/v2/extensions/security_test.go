@@ -4,14 +4,13 @@ package extensions
 
 import (
 	"context"
-	"strings"
 	"testing"
 
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/clients"
-	networking "github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/openstack/networking/v2"
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/tools"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/networking/v2/extensions/security/groups"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
+	"github.com/gophercloud/gophercloud/v2/internal/acceptance/clients"
+	networking "github.com/gophercloud/gophercloud/v2/internal/acceptance/openstack/networking/v2"
+	"github.com/gophercloud/gophercloud/v2/internal/acceptance/tools"
+	"github.com/gophercloud/gophercloud/v2/openstack/networking/v2/extensions/security/groups"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
 )
 
 func TestSecurityGroupsCreateUpdateDelete(t *testing.T) {
@@ -93,66 +92,4 @@ func TestSecurityGroupsPort(t *testing.T) {
 	defer networking.DeletePort(t, client, port.ID)
 
 	tools.PrintResource(t, port)
-}
-
-func TestSecurityGroupsRevision(t *testing.T) {
-	client, err := clients.NewNetworkV2Client()
-	th.AssertNoErr(t, err)
-
-	// Create a group
-	group, err := CreateSecurityGroup(t, client)
-	th.AssertNoErr(t, err)
-	defer DeleteSecurityGroup(t, client, group.ID)
-
-	tools.PrintResource(t, group)
-
-	// Store the current revision number.
-	oldRevisionNumber := group.RevisionNumber
-
-	// Update the group without revision number.
-	// This should work.
-	newName := tools.RandomString("TESTACC-", 8)
-	newDescription := ""
-	updateOpts := &groups.UpdateOpts{
-		Name:        newName,
-		Description: &newDescription,
-	}
-	group, err = groups.Update(context.TODO(), client, group.ID, updateOpts).Extract()
-	th.AssertNoErr(t, err)
-
-	tools.PrintResource(t, group)
-
-	// This should fail due to an old revision number.
-	newDescription = "new description"
-	updateOpts = &groups.UpdateOpts{
-		Name:           newName,
-		Description:    &newDescription,
-		RevisionNumber: &oldRevisionNumber,
-	}
-	_, err = groups.Update(context.TODO(), client, group.ID, updateOpts).Extract()
-	th.AssertErr(t, err)
-	if !strings.Contains(err.Error(), "RevisionNumberConstraintFailed") {
-		t.Fatalf("expected to see an error of type RevisionNumberConstraintFailed, but got the following error instead: %v", err)
-	}
-
-	// Reread the group to show that it did not change.
-	group, err = groups.Get(context.TODO(), client, group.ID).Extract()
-	th.AssertNoErr(t, err)
-
-	tools.PrintResource(t, group)
-
-	// This should work because now we do provide a valid revision number.
-	newDescription = "new description"
-	updateOpts = &groups.UpdateOpts{
-		Name:           newName,
-		Description:    &newDescription,
-		RevisionNumber: &group.RevisionNumber,
-	}
-	group, err = groups.Update(context.TODO(), client, group.ID, updateOpts).Extract()
-	th.AssertNoErr(t, err)
-
-	tools.PrintResource(t, group)
-
-	th.AssertEquals(t, group.Name, newName)
-	th.AssertEquals(t, group.Description, newDescription)
 }

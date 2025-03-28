@@ -6,12 +6,12 @@ import (
 	"context"
 	"testing"
 
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/clients"
-	v1 "github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/openstack/baremetal/v1"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/baremetal/v1/ports"
-	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
+	"github.com/gophercloud/gophercloud/v2/internal/acceptance/clients"
+	v1 "github.com/gophercloud/gophercloud/v2/internal/acceptance/openstack/baremetal/v1"
+	"github.com/gophercloud/gophercloud/v2/openstack/baremetal/v1/ports"
+	"github.com/gophercloud/gophercloud/v2/pagination"
 
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
 )
 
 func TestPortsCreateDestroy(t *testing.T) {

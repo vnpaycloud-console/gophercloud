@@ -4,10 +4,10 @@ import (
 	"encoding/json"
 	"time"
 
-	"github.com/vnpaycloud-console/gophercloud/v2"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/db/v1/datastores"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/db/v1/users"
-	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
+	"github.com/gophercloud/gophercloud/v2"
+	"github.com/gophercloud/gophercloud/v2/openstack/db/v1/datastores"
+	"github.com/gophercloud/gophercloud/v2/openstack/db/v1/users"
+	"github.com/gophercloud/gophercloud/v2/pagination"
 )
 
 // Volume represents information about an attached volume for a database instance.

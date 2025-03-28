@@ -6,12 +6,11 @@ import (
 	"context"
 	"testing"
 
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/clients"
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/tools"
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/ptr"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/loadbalancer/v2/flavorprofiles"
+	"github.com/gophercloud/gophercloud/v2/internal/acceptance/clients"
+	"github.com/gophercloud/gophercloud/v2/internal/acceptance/tools"
+	"github.com/gophercloud/gophercloud/v2/openstack/loadbalancer/v2/flavorprofiles"
 
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
 )
 
 func TestFlavorProfilesList(t *testing.T) {
@@ -42,13 +41,13 @@ func TestFlavorProfilesCRUD(t *testing.T) {
 	th.AssertEquals(t, "amphora", flavorProfile.ProviderName)
 
 	flavorProfileUpdateOpts := flavorprofiles.UpdateOpts{
-		Name: ptr.To(tools.RandomString("TESTACCTUP-", 8)),
+		Name: tools.RandomString("TESTACCTUP-", 8),
 	}
 
 	flavorProfileUpdated, err := flavorprofiles.Update(context.TODO(), lbClient, flavorProfile.ID, flavorProfileUpdateOpts).Extract()
 	th.AssertNoErr(t, err)
 
-	th.AssertEquals(t, *flavorProfileUpdateOpts.Name, flavorProfileUpdated.Name)
+	th.AssertEquals(t, flavorProfileUpdateOpts.Name, flavorProfileUpdated.Name)
 
 	t.Logf("Successfully updated flavorprofile %s", flavorProfileUpdated.Name)
 }

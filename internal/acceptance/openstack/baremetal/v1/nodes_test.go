@@ -7,11 +7,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/clients"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/baremetal/v1/nodes"
-	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
+	"github.com/gophercloud/gophercloud/v2/internal/acceptance/clients"
+	"github.com/gophercloud/gophercloud/v2/openstack/baremetal/v1/nodes"
+	"github.com/gophercloud/gophercloud/v2/pagination"
 
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
 )
 
 func TestNodesCreateDestroy(t *testing.T) {
@@ -219,7 +219,7 @@ func TestNodesVirtualMedia(t *testing.T) {
 
 	client, err := clients.NewBareMetalV1Client()
 	th.AssertNoErr(t, err)
-	client.Microversion = "1.93"
+	client.Microversion = "1.89"
 
 	node, err := CreateNode(t, client)
 	th.AssertNoErr(t, err)
@@ -241,15 +241,6 @@ func TestNodesVirtualMedia(t *testing.T) {
 
 	err = nodes.DetachVirtualMedia(context.TODO(), client, node.UUID, nodes.DetachVirtualMediaOpts{}).ExtractErr()
 	th.AssertNoErr(t, err)
-
-	err = nodes.GetVirtualMedia(context.TODO(), client, node.UUID).Err
-	// Since Virtual Media GET api call is synchronous, we get a HTTP 400
-	// response as CreateNode has ipmi driver hardcoded, but the api is
-	// only supported by the redfish driver
-	// (TODO: hroyrh) fix this once redfish driver is used in the tests
-	if node.Driver == "redfish" {
-		th.AssertNoErr(t, err)
-	}
 }
 
 func TestNodesServicingHold(t *testing.T) {
@@ -280,52 +271,4 @@ func TestNodesServicingHold(t *testing.T) {
 		},
 	}, nodes.Active)
 	th.AssertNoErr(t, err)
-}
-
-func TestNodesVirtualInterfaces(t *testing.T) {
-	clients.SkipReleasesBelow(t, "stable/2023.2") // Adjust based on when this feature was added
-	clients.RequireLong(t)
-
-	client, err := clients.NewBareMetalV1Client()
-	th.AssertNoErr(t, err)
-	// VIFs were added in API version 1.28, but at least 1.38 is needed for tests to pass
-	client.Microversion = "1.38"
-
-	node, err := CreateNode(t, client)
-	th.AssertNoErr(t, err)
-	defer DeleteNode(t, client, node)
-
-	// First, list VIFs (should be empty initially)
-	vifs, err := nodes.ListVirtualInterfaces(context.TODO(), client, node.UUID).Extract()
-	th.AssertNoErr(t, err)
-	th.AssertEquals(t, 0, len(vifs))
-
-	// For a real test, we would need a valid VIF ID from the networking service
-	// Since this is difficult in a test environment, we can test the API call
-	// with a fake ID and expect it to fail with a specific error
-	fakeVifID := "1974dcfa-836f-41b2-b541-686c100900e5"
-
-	// Try to attach a VIF (this will likely fail with a 404 Not Found since the VIF doesn't exist)
-	err = nodes.AttachVirtualInterface(context.TODO(), client, node.UUID, nodes.VirtualInterfaceOpts{
-		ID: fakeVifID,
-	}).ExtractErr()
-
-	// We expect this to fail, but we're testing the API call itself
-	// In a real environment with valid VIFs, you would check for success instead
-	if err == nil {
-		t.Logf("Warning: Expected error when attaching non-existent VIF, but got success. This might indicate the test environment has a VIF with ID %s", fakeVifID)
-	}
-
-	// Try to detach a VIF (this will likely fail with a 404 Not Found)
-	err = nodes.DetachVirtualInterface(context.TODO(), client, node.UUID, fakeVifID).ExtractErr()
-
-	// Again, we expect this to fail in most test environments
-	if err == nil {
-		t.Logf("Warning: Expected error when detaching non-existent VIF, but got success. This might indicate the test environment has a VIF with ID %s", fakeVifID)
-	}
-
-	// List VIFs again to confirm state hasn't changed
-	vifs, err = nodes.ListVirtualInterfaces(context.TODO(), client, node.UUID).Extract()
-	th.AssertNoErr(t, err)
-	th.AssertEquals(t, 0, len(vifs))
 }

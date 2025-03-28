@@ -3,8 +3,8 @@ package endpoints
 import (
 	"context"
 
-	"github.com/vnpaycloud-console/gophercloud/v2"
-	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
+	"github.com/gophercloud/gophercloud/v2"
+	"github.com/gophercloud/gophercloud/v2/pagination"
 )
 
 type CreateOptsBuilder interface {
@@ -88,13 +88,6 @@ func List(client *gophercloud.ServiceClient, opts ListOptsBuilder) pagination.Pa
 	return pagination.NewPager(client, u, func(r pagination.PageResult) pagination.Page {
 		return EndpointPage{pagination.LinkedPageBase{PageResult: r}}
 	})
-}
-
-// Get retrieves details on a single endpoint, by ID.
-func Get(ctx context.Context, client *gophercloud.ServiceClient, id string) (r GetResult) {
-	resp, err := client.Get(ctx, endpointURL(client, id), &r.Body, nil)
-	_, r.Header, r.Err = gophercloud.ParseResponse(resp, err)
-	return
 }
 
 // UpdateOptsBuilder allows extensions to add parameters to the Update request.

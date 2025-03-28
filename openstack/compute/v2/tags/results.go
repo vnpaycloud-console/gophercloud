@@ -3,7 +3,7 @@ package tags
 import (
 	"net/http"
 
-	"github.com/vnpaycloud-console/gophercloud/v2"
+	"github.com/gophercloud/gophercloud/v2"
 )
 
 type commonResult struct {

@@ -5,9 +5,9 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/blockstorage/v3/quotasets"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
-	"github.com/vnpaycloud-console/gophercloud/v2/testhelper/client"
+	"github.com/gophercloud/gophercloud/v2/openstack/blockstorage/v3/quotasets"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
+	"github.com/gophercloud/gophercloud/v2/testhelper/client"
 )
 
 func TestGet(t *testing.T) {
@@ -51,7 +51,7 @@ func TestPartialUpdate(t *testing.T) {
 	HandleSuccessfulRequest(t, "PUT", "/os-quota-sets/"+FirstTenantID, partialUpdateExpectedJSONBody, uriQueryParms)
 	actual, err := quotasets.Update(context.TODO(), client.ServiceClient(), FirstTenantID, partialUpdateOpts).Extract()
 	th.AssertNoErr(t, err)
-	th.CheckDeepEquals(t, &partialUpdateExpectedQuotaSet, actual)
+	th.CheckDeepEquals(t, &partiualUpdateExpectedQuotaSet, actual)
 }
 
 type ErrorUpdateOpts quotasets.UpdateOpts

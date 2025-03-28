@@ -6,12 +6,12 @@ import (
 	"context"
 	"testing"
 
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/clients"
-	blockstorage "github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/openstack/blockstorage/v2"
-	"github.com/vnpaycloud-console/gophercloud/v2/internal/acceptance/tools"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/compute/v2/servers"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/compute/v2/volumeattach"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
+	"github.com/gophercloud/gophercloud/v2/internal/acceptance/clients"
+	blockstorage "github.com/gophercloud/gophercloud/v2/internal/acceptance/openstack/blockstorage/v2"
+	"github.com/gophercloud/gophercloud/v2/internal/acceptance/tools"
+	"github.com/gophercloud/gophercloud/v2/openstack/compute/v2/servers"
+	"github.com/gophercloud/gophercloud/v2/openstack/compute/v2/volumeattach"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
 )
 
 func TestBootFromImage(t *testing.T) {

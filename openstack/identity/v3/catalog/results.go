@@ -1,8 +1,8 @@
 package catalog
 
 import (
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/identity/v3/tokens"
-	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
+	"github.com/gophercloud/gophercloud/v2/openstack/identity/v3/tokens"
+	"github.com/gophercloud/gophercloud/v2/pagination"
 )
 
 // ServiceCatalogPage is a single page of Service results.

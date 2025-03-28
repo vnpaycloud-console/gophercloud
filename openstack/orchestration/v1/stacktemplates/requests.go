@@ -3,7 +3,7 @@ package stacktemplates
 import (
 	"context"
 
-	"github.com/vnpaycloud-console/gophercloud/v2"
+	"github.com/gophercloud/gophercloud/v2"
 )
 
 // Get retreives data for the given stack template.

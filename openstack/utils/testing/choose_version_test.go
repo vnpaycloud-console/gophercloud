@@ -7,9 +7,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/vnpaycloud-console/gophercloud/v2"
-	"github.com/vnpaycloud-console/gophercloud/v2/openstack/utils"
-	th "github.com/vnpaycloud-console/gophercloud/v2/testhelper"
+	"github.com/gophercloud/gophercloud/v2"
+	"github.com/gophercloud/gophercloud/v2/openstack/utils"
+	th "github.com/gophercloud/gophercloud/v2/testhelper"
 )
 
 func setupVersionHandler() {

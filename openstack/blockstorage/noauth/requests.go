@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/vnpaycloud-console/gophercloud/v2"
+	"github.com/gophercloud/gophercloud/v2"
 )
 
 // EndpointOpts specifies a "noauth" Cinder Endpoint.
@@ -51,10 +51,10 @@ func initClientOpts(client *gophercloud.ProviderClient, eo EndpointOpts, clientT
 
 // NewBlockStorageNoAuthV2 creates a ServiceClient that may be used to access "noauth" v2 block storage service.
 func NewBlockStorageNoAuthV2(client *gophercloud.ProviderClient, eo EndpointOpts) (*gophercloud.ServiceClient, error) {
-	return initClientOpts(client, eo, "block-storage")
+	return initClientOpts(client, eo, "volumev2")
 }
 
 // NewBlockStorageNoAuthV3 creates a ServiceClient that may be used to access "noauth" v3 block storage service.
 func NewBlockStorageNoAuthV3(client *gophercloud.ProviderClient, eo EndpointOpts) (*gophercloud.ServiceClient, error) {
-	return initClientOpts(client, eo, "block-storage")
+	return initClientOpts(client, eo, "volumev3")
 }
