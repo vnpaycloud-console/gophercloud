@@ -55,6 +55,7 @@ type VPC struct {
 	CreatedAt   string `json:"created_at"`
 	UpdatedAt   string `json:"updated_at"`
 	ProjectID   string `json:"project_id"`
+	Status      string `json:"status"`
 }
 
 func (r *VPC) UnmarshalJSON(b []byte) error {
