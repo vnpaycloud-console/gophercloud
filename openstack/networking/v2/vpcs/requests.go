@@ -18,6 +18,7 @@ type ListOpts struct {
 	ID        string `q:"id"`
 	ProjectID string `q:"project_id"`
 	Limit     int    `q:"limit"`
+	Status    string `q:"status"`
 }
 
 // ToVPCListQuery formats a ListOpts into a query string.
