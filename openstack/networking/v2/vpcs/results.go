@@ -1,6 +1,9 @@
 package vpcs
 
 import (
+	"encoding/json"
+	"time"
+
 	"github.com/vnpaycloud-console/gophercloud/v2"
 	"github.com/vnpaycloud-console/gophercloud/v2/pagination"
 )
@@ -46,18 +49,54 @@ type DeleteResult struct {
 
 // VPC represents, well, a VPC.
 type VPC struct {
-	ID          string `json:"id"`
-	Name        string `json:"name"`
-	Description string `json:"description"`
-	CIDR        string `json:"cidr"`
-	SNATAddress string `json:"snat_address"`
-	EnableSNAT  bool   `json:"enable_snat"`
-	CreatedAt   string `json:"created_at"`
-	UpdatedAt   string `json:"updated_at"`
-	ProjectID   string `json:"project_id"`
+	ID          string    `json:"id"`
+	Name        string    `json:"name"`
+	Description string    `json:"description"`
+	CIDR        string    `json:"cidr"`
+	SNATAddress string    `json:"snat_address"`
+	EnableSNAT  bool      `json:"enable_snat"`
+	Region      string    `json:"region"`
+	UpdatedAt   time.Time `json:"-"`
+	CreatedAt   time.Time `json:"-"`
+	ProjectID   string    `json:"project_id"`
+	Status      string    `json:"status"`
 }
 
 func (r *VPC) UnmarshalJSON(b []byte) error {
+	type tmp VPC
+
+	// Support for older neutron time format
+	var s1 struct {
+		tmp
+		CreatedAt gophercloud.JSONRFC3339NoZ `json:"created_at"`
+		UpdatedAt gophercloud.JSONRFC3339NoZ `json:"updated_at"`
+	}
+
+	err := json.Unmarshal(b, &s1)
+	if err == nil {
+		*r = VPC(s1.tmp)
+		r.CreatedAt = time.Time(s1.CreatedAt)
+		r.UpdatedAt = time.Time(s1.UpdatedAt)
+
+		return nil
+	}
+
+	// Support for newer neutron time format
+	var s2 struct {
+		tmp
+		CreatedAt time.Time `json:"created_at"`
+		UpdatedAt time.Time `json:"updated_at"`
+	}
+
+	err = json.Unmarshal(b, &s2)
+	if err != nil {
+		return err
+	}
+
+	*r = VPC(s2.tmp)
+	r.CreatedAt = time.Time(s2.CreatedAt)
+	r.UpdatedAt = time.Time(s2.UpdatedAt)
+
 	return nil
 }
 

@@ -61,7 +61,6 @@ type CreateOpts struct {
 	Name        string `json:"name,omitempty"`
 	Description string `json:"description,omitempty"`
 	CIDR        string `json:"cidr,omitempty"`
-	ProjectID   string `json:"project_id,omitempty"`
 }
 
 // ToVPCCreateMap formats a CreateOpts struct into a request body.
