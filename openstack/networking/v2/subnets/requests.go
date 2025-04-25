@@ -42,6 +42,7 @@ type ListOpts struct {
 	TagsAny           string `q:"tags-any"`
 	NotTags           string `q:"not-tags"`
 	NotTagsAny        string `q:"not-tags-any"`
+	VPCID             string `q:"vpc_id"`
 }
 
 // ToSubnetListQuery formats a ListOpts into a query string.
@@ -146,6 +147,8 @@ type CreateOpts struct {
 	// Prefixlen is used when user creates a subnet from the subnetpool. It will
 	// overwrite the "default_prefixlen" value of the referenced subnetpool.
 	Prefixlen int `json:"prefixlen,omitempty"`
+
+	VPCID string `json:"vpc_id,omitempty"`
 }
 
 // ToSubnetCreateMap builds a request body from CreateOpts.
