@@ -121,6 +121,8 @@ type Subnet struct {
 
 	// RevisionNumber optionally set via extensions/standard-attr-revisions
 	RevisionNumber int `json:"revision_number"`
+
+	VPCID string `json:"vpc_id"`
 }
 
 // SubnetPage is the page returned by a pager when traversing over a collection
