@@ -128,6 +128,7 @@ type CreateOpts struct {
 	AllowedAddressPairs   []AddressPair      `json:"allowed_address_pairs,omitempty"`
 	PropagateUplinkStatus *bool              `json:"propagate_uplink_status,omitempty"`
 	ValueSpecs            *map[string]string `json:"value_specs,omitempty"`
+	VirtualIp             *bool              `json:"virtual_ip,omitempty"`
 }
 
 // ToPortCreateMap builds a request body from CreateOpts.
@@ -200,7 +201,8 @@ type UpdateOpts struct {
 	// RevisionNumber implements extension:standard-attr-revisions. If != "" it
 	// will set revision_number=%s. If the revision number does not match, the
 	// update will fail.
-	RevisionNumber *int `json:"-" h:"If-Match"`
+	RevisionNumber *int  `json:"-" h:"If-Match"`
+	VirtualIp      *bool `json:"virtual_ip,omitempty"`
 }
 
 // ToPortUpdateMap builds a request body from UpdateOpts.
